@@ -1,6 +1,6 @@
 # cpsc344Project
 
-This contains the code and asessts used in our CPSC 344 Level Design class. In order to push to this, do the following:
+In order to push to this, do the following:
 git add -A (instead of -A, you can upload a specific file too)
 git commit -m "insert what you edited"
 git push -u origin master
