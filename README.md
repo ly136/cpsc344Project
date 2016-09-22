@@ -7,3 +7,5 @@ git push -u origin master
 
 And to pull, just go to the directory that's created when you cloned this and do:
 git pull
+
+More help here: http://stackoverflow.com/questions/21573405/how-to-prepare-a-unity-project-for-git
