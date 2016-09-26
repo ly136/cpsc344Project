@@ -1,7 +1,7 @@
 # cpsc344Project
 This contains the Unity files needed in order to make our game. 
 
-## In order to push to this, go to the folder where you cloned this project and in the folder that has the work you did, do the following:
+## In order to send the files you worked on to this repository, go to the folder where you cloned this project and in the folder that has the work you did, do the following:
 - git add -A (instead of -A, you can upload a specific file too like Script1.cs or texture1.png)
 - git commit -m "description of what you edited"
 - git push -u origin master
