@@ -87,12 +87,7 @@ public class PlayerMovement : MonoBehaviour {
 	void OnTriggerStay(Collider other)
 	{
 		if(other.gameObject.tag == "InspectEvent" && Input.GetKeyDown(KeyCode.Space) == true)
-		{
-			if(other.gameObject.GetComponent<ItemGetNeedEvent>().hasSolvedEvent == false)
-			{
-				isInteracting = true;
-			}
-		}
+			isInteracting = true;
 	}
 
 }
