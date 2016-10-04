@@ -3,7 +3,6 @@ using System.Collections;
 
 //This handles opening and closing the door. Also does a check to see if the door is locked.
 //To work with locked doors, you need to attatch the ItemGetNeedEvent to the door itself.
-
 public class DoorEvent : MonoBehaviour {
 
 	public bool isOpen;							//Is the door currently open?
@@ -24,21 +23,18 @@ public class DoorEvent : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Player")
 		{
-			if(other.gameObject.GetComponent<PlayerMovement>().isInteracting == true)
+			PlayerActions player = other.gameObject.GetComponent<PlayerActions>();
+			if(player.isInteracting == true)
 			{
-				if(lockedEvent != null)	//Does thi door need something to use it?
+				if(lockedEvent != null)	//Does this door need something to use it?
 				{
 					if(lockedEvent.GetComponent<ItemGetNeedEvent>().hasSolvedEvent == true)
-					{
 						DoorOpenClose();
-					}
 				}
 				else
-				{
 					DoorOpenClose();
-				}
 			}
-			other.gameObject.GetComponent<PlayerMovement>().isInteracting = false;
+			player.isInteracting = false;
 		}
 	}
 
