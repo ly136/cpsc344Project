@@ -328,7 +328,7 @@ GameObject:
   - 114: {fileID: 142212208}
   m_Layer: 0
   m_Name: paper2
-  m_TagString: Untagged
+  m_TagString: InspectEvent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemAvailableOrNeed: paper2
+  itemAvailableOrNeed:
+  - paper2
   isUsingItemEvent: 0
   hasSolvedEvent: 0
 --- !u!65 &142212209
@@ -354,10 +355,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 142212207}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 2, y: 30.33, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &142212210
 MeshRenderer:
@@ -1274,7 +1275,7 @@ GameObject:
   - 114: {fileID: 1158181758}
   m_Layer: 0
   m_Name: paper4
-  m_TagString: Untagged
+  m_TagString: InspectEvent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1290,7 +1291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemAvailableOrNeed: paper4
+  itemAvailableOrNeed:
+  - paper4
   isUsingItemEvent: 0
   hasSolvedEvent: 0
 --- !u!65 &1158181759
@@ -1300,7 +1302,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1158181757}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 86.64, z: 2}
@@ -1510,7 +1512,7 @@ GameObject:
   - 114: {fileID: 1535151183}
   m_Layer: 0
   m_Name: paper3
-  m_TagString: Untagged
+  m_TagString: InspectEvent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1526,7 +1528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemAvailableOrNeed: paper3
+  itemAvailableOrNeed:
+  - paper3
   isUsingItemEvent: 0
   hasSolvedEvent: 0
 --- !u!65 &1535151184
@@ -1536,7 +1539,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1535151182}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 103.91, z: 2}
@@ -1604,7 +1607,7 @@ GameObject:
   - 114: {fileID: 1575041249}
   m_Layer: 0
   m_Name: Laptop
-  m_TagString: Untagged
+  m_TagString: InspectEvent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1620,7 +1623,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemAvailableOrNeed: Charger
+  itemAvailableOrNeed:
+  - Charger
+  - paper1
+  - paper2
+  - paper3
+  - paper4
   isUsingItemEvent: 1
   hasSolvedEvent: 0
 --- !u!23 &1575041250
@@ -1659,10 +1667,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1575041248}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3.9, y: 5.14, z: 2.45}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1575041252
 MeshFilter:
@@ -1963,7 +1971,7 @@ GameObject:
   - 114: {fileID: 1803189920}
   m_Layer: 0
   m_Name: Charger
-  m_TagString: Untagged
+  m_TagString: InspectEvent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1979,7 +1987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemAvailableOrNeed: Charger
+  itemAvailableOrNeed:
+  - Charger
   isUsingItemEvent: 0
   hasSolvedEvent: 0
 --- !u!23 &1803189921
@@ -2021,7 +2030,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.18, y: 4.84, z: 4.54}
+  m_Size: {x: 5.11, y: 12.25, z: 8.48}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1803189923
 MeshFilter:
@@ -2057,7 +2066,7 @@ GameObject:
   - 114: {fileID: 1836022741}
   m_Layer: 0
   m_Name: paper
-  m_TagString: Untagged
+  m_TagString: InspectEvent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2073,7 +2082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemAvailableOrNeed: paper1
+  itemAvailableOrNeed:
+  - paper1
   isUsingItemEvent: 0
   hasSolvedEvent: 0
 --- !u!65 &1836022742
@@ -2083,7 +2093,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1836022740}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 49.19, z: 2}
