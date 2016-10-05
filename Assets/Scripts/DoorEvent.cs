@@ -6,16 +6,14 @@ using System.Collections;
 public class DoorEvent : MonoBehaviour {
 
 	public bool isOpen;							//Is the door currently open?
+	public GameObject lockedEvent;				//This contains the GameObject that has the event which is locking the door.
 
-	private Transform lockedEvent;				//This contains the GameObject that has the ItemGetNeedEvent.
 	private Transform actualDoor;				//This contains the door itself.
 
-	//Sets the two gameobject variables in order to allow for easier calling.
+	//ActualDoor is set here for easier calling.
 	void Start()
 	{
 		actualDoor = gameObject.transform.parent;
-		if(actualDoor.transform.childCount > 1)
-			lockedEvent = gameObject.transform.parent.transform.GetChild(1);
 	}
 
 	//If the player is interacting with the door, the door will either open or close.
@@ -28,8 +26,16 @@ public class DoorEvent : MonoBehaviour {
 			{
 				if(lockedEvent != null)	//Does this door need something to use it?
 				{
-					if(lockedEvent.GetComponent<ItemGetNeedEvent>().hasSolvedEvent == true)
-						DoorOpenClose();
+					if(lockedEvent.GetComponent<SwitchReceiver>() != null)
+					{
+						if(lockedEvent.GetComponent<SwitchReceiver>().hasSolvedEvent == true)
+							DoorOpenClose();
+					}
+					else if(lockedEvent.GetComponent<ItemGetNeedEvent>() != null)
+					{
+						if(lockedEvent.GetComponent<ItemGetNeedEvent>().hasSolvedEvent == true)
+							DoorOpenClose();
+					}
 				}
 				else
 					DoorOpenClose();
@@ -44,14 +50,14 @@ public class DoorEvent : MonoBehaviour {
 		if(isOpen == true)
 		{
 			//Insert something with animation to close the door. This is temp.
-			actualDoor.position = new Vector3(actualDoor.position.x, actualDoor.position.y - 2f, actualDoor.position.z);
+			actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y - 2f, actualDoor.transform.position.z);
 			isOpen = false;
 
 		}
 		else
 		{
 			//Insert something with animation to open the door. This is temp.
-			actualDoor.position = new Vector3(actualDoor.position.x, actualDoor.position.y + 2f, actualDoor.position.z);
+			actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y + 2f, actualDoor.transform.position.z);
 			isOpen = true;
 		}
 	}
