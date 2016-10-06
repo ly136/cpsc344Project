@@ -1,11 +1,27 @@
-How to use Git with this project:
+How to use Git with Unity
 
-## In order to send the files you worked on to this repository, go to the folder where you cloned this project and in the folder that has the work you did, do the following:
-- git add -A (-A means add everything. You can upload a specific file or folder too like Script1.cs, texture1.png, Music/ instead of doing -A)
-- git commit -m "description of what you edited" (This adds a change description to all of the files you added so far.)
-- git push -u origin master (You only need to do this once you're done adding/commiting all of the files you've edited)
+In order to prevent the master branch from getting too cluttered, we're going to implement branches so that everyone can
+branch off of the master branch and only merge the changes that they made into it. First, to make a branch: 
+- git checkout -b [name of branch] (I've already made a branch called postAlpha; if you don't see it, just make your own branch)
 
-## And to update the copy you have, just go to the directory that's created when you first cloned this and do:
+In order to switch from branch to branch, simply do:
+- git checkout [name of branch]
+And to check the current branches in the repository/the branch you're in, do:
+- git branch
+
+After doing this, you can now commit the files you worked on in your branch to that branch you made personally. It's still the following:
+- git add [file name] (-A means add everything in the current folder you're in, * adds everything that's in the cloned folder. You can upload a specific folder too like Script1.cs, texture1.png, Music/ too of you want to be specific. Just remember to add the .meta file too!)
+- git commit -m ("description of what you edited") [file name] (if you don't add a file name, you'll just commit everything you added so far.)
+- git push -u origin [name of branch you're in] (DO NOT PUSH TO THE MASTER BRANCH YET)
+
+Once you've gotten your changes approved/working, you can then merge yoru branch to the master branch. Do the following:
+- git checkout master
+- git merge [name of your branch you have your approved changes] --no-ff
+- git push -u origin master
+
+If you need a fresh copy of the master branch/your current branch, make sure you're in the right branch in Git Bash/Terminal and do:
 - git pull
 
-[For help on preparing Unity with GitHub, click me!](http://stackoverflow.com/questions/21573405/how-to-prepare-a-unity-project-for-git)
+(I've tried to summarize what I found on websites: you should read them so you can double check what I said.)
+Preparing Unity with GitHub: http://stackoverflow.com/questions/21573405/how-to-prepare-a-unity-project-for-git)
+Creating branches and meging them to the master branch: (https://www.digitalocean.com/community/tutorials/how-to-use-git-branches)
