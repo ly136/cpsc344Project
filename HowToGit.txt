@@ -25,3 +25,4 @@ If you need a fresh copy of the master branch/your current branch, make sure you
 (I've tried to summarize what I found on websites: you should read them so you can double check what I said.)
 Preparing Unity with GitHub: http://stackoverflow.com/questions/21573405/how-to-prepare-a-unity-project-for-git
 Creating branches and meging them to the master branch: https://www.digitalocean.com/community/tutorials/how-to-use-git-branches
+Another helpful link regarding Git: https://guides.github.com/activities/hello-world/
