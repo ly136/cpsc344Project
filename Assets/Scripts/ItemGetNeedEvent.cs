@@ -2,19 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 
-//This event occurs if the player inspects it. The player will be given an item/uses an item if they have it.
-//If the player is getting an item, the item list MUST have only one item.
+//This event occurs if the player inspects it. The player will be given an item/uses an item if they have it. If the player is getting an item, the item list MUST have only one item.
 public class ItemGetNeedEvent : MonoBehaviour {
 
 	public List<string> itemAvailableOrNeed = new List<string>();			//What items can the player acquire/use here?
 	public bool isUsingItemEvent;											//Is the player using an item here?
-	public bool hasSolvedEvent;												//Has the event item been gotten or did the player solve it?
+	public bool partOfEventChain;											//Is this object part of the RoomEvents? If so, mark it here!
 	public bool destroyOnComplete;											//Will this object get removed once it's cleared?
 
 	//Checks whether this event will be destroyed once it's complete.
 	void Update()
 	{
-		if(hasSolvedEvent == true && destroyOnComplete == true)
+		if(gameObject.GetComponent<HasSolvedEvent>().GetIfSolvedEvent() == true && destroyOnComplete == true)
 			Destroy(gameObject);
 	}
 
@@ -26,7 +25,7 @@ public class ItemGetNeedEvent : MonoBehaviour {
 			PlayerActions player = other.gameObject.GetComponent<PlayerActions>();
 			if(player.isInteracting == true)
 			{
-				if(hasSolvedEvent == false)
+				if(gameObject.GetComponent<HasSolvedEvent>().GetIfSolvedEvent() == false)
 				{
 					if(isUsingItemEvent == true)
 					{
@@ -40,7 +39,7 @@ public class ItemGetNeedEvent : MonoBehaviour {
 								player.RemoveFromInventory(currItem);
 								itemAvailableOrNeed.Remove(currItem);
 								if(itemAvailableOrNeed.Count == 0)
-									hasSolvedEvent = true;
+									gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
 								break;
 							}
 						}
@@ -48,11 +47,23 @@ public class ItemGetNeedEvent : MonoBehaviour {
 					else
 					{
 						player.AddToInventory(itemAvailableOrNeed[0]);
-						hasSolvedEvent = true;
+						gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
 					}
 				}
 			}
 			player.isInteracting = false;
+		}
+	}
+
+	//If this event is part of the RoomEvents, the gameobject with RoomEvents will check if it can spawn any more events
+	void OnDestroy()
+	{
+		if(GameObject.FindGameObjectWithTag("RoomEvents") != null && partOfEventChain == true)
+		{
+			GameObject.FindGameObjectWithTag("RoomEvents").GetComponent<RoomEvents>().currEventsComplete++;
+
+			if(GameObject.FindGameObjectWithTag("RoomEvents").GetComponent<RoomEvents>().CheckIfCanSpawnMore())
+				GameObject.FindGameObjectWithTag("RoomEvents").GetComponent<RoomEvents>().SpawnEvents();	
 		}
 	}
 }
