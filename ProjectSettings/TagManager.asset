@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - InspectEvent
+  - SwitchReceiver
+  - RoomEvents
   layers:
   - Default
   - TransparentFX
