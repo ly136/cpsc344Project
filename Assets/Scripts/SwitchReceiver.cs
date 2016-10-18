@@ -5,7 +5,6 @@ using System.Collections;
 public class SwitchReceiver : MonoBehaviour {
 
 	public GameObject[] switchInspectObjects;	//Array of all of the switch objects that this event is associated with.
-	public bool hasSolvedEvent;					//Is this event solved?
 
 	//If all of the switch objects have been activated, this event is solved.
 	public void CheckSwitchObjects()
@@ -14,13 +13,12 @@ public class SwitchReceiver : MonoBehaviour {
 		{
 			if(switchInspectObjects[i].GetComponent<SwitchInspect>().isSwitchActivated == false)
 			{
-				hasSolvedEvent = false;
+				gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(false);
 				print("I'm closed...");
 				return;
 			}
-				
 		}
-		hasSolvedEvent = true;
+		gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
 		print("I'm open!");
 	}
 

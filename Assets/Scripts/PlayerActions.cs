@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 // This class will simply have the player controls. This class will have an interact button. This will do various things with the enviroment. 
-// This  will also contain the player's inventory as well as methods to modify it.
+// This will also contain the player's inventory as well as methods to modify it.
 // I used https://www.youtube.com/watch?v=5pkeRlpjFzQ&index=4&list=WL to help fix some bugs regarding movement.
 
 public class PlayerActions : MonoBehaviour {
@@ -53,7 +53,8 @@ public class PlayerActions : MonoBehaviour {
 					playerControl.velocity = Vector3.zero;
 				else
 				{
-					playerControl.AddRelativeForce(Input.GetAxis("Horizontal") * walkAcceleleration, 0, Input.GetAxis("Vertical") * walkAcceleleration);
+					Vector3 moveForce = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+					gameObject.GetComponent<Rigidbody>().AddRelativeForce(moveForce * walkAcceleleration);
 					horizontalMovement = new Vector3(playerControl.velocity.x, 0, playerControl.velocity.z);
 					if(horizontalMovement.magnitude > maxWalkSpeed)
 					{
@@ -78,8 +79,6 @@ public class PlayerActions : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "ApproachEvent")
 			isInteracting = true;
-		if(other.gameObject.tag == "Ground")
-			isGrounded = true;
 	}
 
 	//If the player is within range of an interactive object, this will make the player inspect it.
@@ -87,6 +86,8 @@ public class PlayerActions : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "InspectEvent" && Input.GetKeyDown(KeyCode.E) == true)
 			isInteracting = true;
+		if(other.gameObject.tag == "Ground")
+			isGrounded = true;
 	}
 
 	//Removes an item from the inventory

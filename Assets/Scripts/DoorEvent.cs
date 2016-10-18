@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//This handles opening and closing the door. Also does a check to see if the door is locked.
-//To work with locked doors, you need to attatch the ItemGetNeedEvent to the door itself.
+//This handles opening and closing the door. To work with locked doors, you need to attatch the ItemGetNeedEvent to the door itself.
 public class DoorEvent : MonoBehaviour {
 
 	public bool isOpen;							//Is the door currently open?
@@ -26,16 +25,8 @@ public class DoorEvent : MonoBehaviour {
 			{
 				if(lockedEvent != null)	//Does this door need something to use it?
 				{
-					if(lockedEvent.GetComponent<SwitchReceiver>() != null)
-					{
-						if(lockedEvent.GetComponent<SwitchReceiver>().hasSolvedEvent == true)
-							DoorOpenClose();
-					}
-					else if(lockedEvent.GetComponent<ItemGetNeedEvent>() != null)
-					{
-						if(lockedEvent.GetComponent<ItemGetNeedEvent>().hasSolvedEvent == true)
-							DoorOpenClose();
-					}
+					if(lockedEvent.GetComponent<HasSolvedEvent>().GetIfSolvedEvent() == true)
+						DoorOpenClose();
 				}
 				else
 					DoorOpenClose();

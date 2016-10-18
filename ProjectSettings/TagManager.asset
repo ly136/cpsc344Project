@@ -8,6 +8,8 @@ TagManager:
   - InspectEvent
   - ApproachEvent
   - SwitchDoor
+  - SwitchReceiver
+  - RoomEvents
   layers:
   - Default
   - TransparentFX
