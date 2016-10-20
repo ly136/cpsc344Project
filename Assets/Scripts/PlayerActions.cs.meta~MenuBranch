@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 245ea9e634733487e88992aa9c41ffc6
-timeCreated: 1475206904
-=======
-guid: 51a166d779849964fbcc5d7fb22133d3
-timeCreated: 1476811458
->>>>>>> MenuBranch
+guid: b919c203429c9924da1a6063abe4e732
+timeCreated: 1476811459
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
