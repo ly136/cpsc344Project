@@ -35,7 +35,6 @@ public class ItemGetNeedEvent : MonoBehaviour {
 							string currItem = player.GetItem(i);
 							if(itemAvailableOrNeed.Contains(currItem) == true)
 							{
-								print("You used " + currItem);
 								player.RemoveFromInventory(currItem);
 								itemAvailableOrNeed.Remove(currItem);
 								if(itemAvailableOrNeed.Count == 0)
@@ -50,8 +49,8 @@ public class ItemGetNeedEvent : MonoBehaviour {
 						gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
 					}
 				}
+				player.isInteracting = false;
 			}
-			player.isInteracting = false;
 		}
 	}
 

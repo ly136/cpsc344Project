@@ -30,8 +30,9 @@ public class DoorEvent : MonoBehaviour {
 				}
 				else
 					DoorOpenClose();
+
+				player.isInteracting = false;
 			}
-			player.isInteracting = false;
 		}
 	}
 

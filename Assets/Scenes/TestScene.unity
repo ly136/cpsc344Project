@@ -2623,15 +2623,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012932472366, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 25.69
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000012932472366, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.96
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000012932472366, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -21.37
+      value: -13.44
       objectReference: {fileID: 0}
     - target: {fileID: 4000012932472366, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2653,19 +2653,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013027381076, guid: 8e3bbaea498f047be8c23ba457a42b8c,
+    - target: {fileID: 114000013750147026, guid: 8e3bbaea498f047be8c23ba457a42b8c,
         type: 2}
-      propertyPath: onlyHorizontal
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013027381076, guid: 8e3bbaea498f047be8c23ba457a42b8c,
-        type: 2}
-      propertyPath: onlyHorizontalMovement
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013927740174, guid: 8e3bbaea498f047be8c23ba457a42b8c,
-        type: 2}
-      propertyPath: maxWalkSpeed
+      propertyPath: timeToDissapear
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []

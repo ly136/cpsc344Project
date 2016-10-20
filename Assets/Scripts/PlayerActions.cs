@@ -96,7 +96,7 @@ public class PlayerActions : MonoBehaviour {
 		if(CheckIfPlayerHasItem(itemToRemove) == true)
 		{
 			itemList.Remove(itemToRemove);
-			print("You removed " + itemToRemove);
+			GameObject.Find("Main Camera").GetComponent<PlayerMessage>().ChangeText("Used " + itemToRemove);
 		}
 	}
 
@@ -104,7 +104,7 @@ public class PlayerActions : MonoBehaviour {
 	public void AddToInventory(string itemToAdd)
 	{
 		itemList.Add(itemToAdd);
-		print("You got " + itemToAdd);
+		GameObject.Find("Main Camera").GetComponent<PlayerMessage>().ChangeText("Obtained " + itemToAdd);
 	}
 
 	//Checks if the player has the said item in their inventory and returns true if they do.
