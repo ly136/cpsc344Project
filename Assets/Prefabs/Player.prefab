@@ -278,8 +278,11 @@ MonoBehaviour:
     m_StretchHeight: 0
   xSize: 804
   ySize: 784
+  xEventSize: 804
+  yEventSize: 284
   currMessage: 
-  timeToDissapear: 3
+  timeToChange: 2
+  messageArray: []
 --- !u!114 &114000013927740174
 MonoBehaviour:
   m_ObjectHideFlags: 1

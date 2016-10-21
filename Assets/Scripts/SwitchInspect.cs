@@ -17,12 +17,12 @@ public class SwitchInspect : MonoBehaviour {
 				if(isSwitchActivated == false)
 				{
 					isSwitchActivated = true;
-					GameObject.Find("Main Camera").GetComponent<PlayerMessage>().ChangeText("You turned it on.");
+					GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("You turned it on.");
 				}
 				else
 				{
 					isSwitchActivated = false;
-					GameObject.Find("Main Camera").GetComponent<PlayerMessage>().ChangeText("You turned it off.");
+					GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("You turned it off.");
 				}
 				switchReceiver.GetComponent<SwitchReceiver>().CheckSwitchObjects();
 			}

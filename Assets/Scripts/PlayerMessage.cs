@@ -3,15 +3,25 @@ using System.Collections;
 
 // This script prints out what the player has gotten to the screen. It'll appear for X seconds and then dissapear. If the player gets another item, that 
 // first text will get replaced and the new text will last for 3 seconds.
+
+// This also contains stuff for having subtitles. This works in that each event w/voices has a string array of sentences that represent what's going on.
+// Each sentence is displyed on screen for X seconds.
+using System;
+
+
 public class PlayerMessage : MonoBehaviour {
 
 	public GUIStyle fontStyle = new GUIStyle();		//The font that will be used for this
-	public float xSize;								//The X axis that the text will appear
-	public float ySize;								//The Y axis that the text will appear							
+	public float xSize;								//The X axis that the text will appear for single messages
+	public float ySize;								//The Y axis that the text will appear for single messages						
+	public float xEventSize;						//The X axis that the text will appear for longer messages
+	public float yEventSize;						//The Y axis that the text will appear for longer messages
 	public string currMessage;						//What's the current message being displayed?
-	public float timeToDissapear;					//How long will the message be displayed for?
+	public float timeToChange;						//How long will the message be displayed for?
+	public string[] messageArray;					//Where all of the messages that an event has is stored.
 
 	private Vector3 posOfGUI;						//Used to dynamically shape the font's position on screens <= 1600x900 resolution
+	private int currMessageIndex;					//Used in messageArray
 
 	//First, this function asjusts the GUI so it's centered around the camera
 	void Start()
@@ -23,23 +33,49 @@ public class PlayerMessage : MonoBehaviour {
 	void OnGUI()
 	{
 		GUI.matrix = Matrix4x4.TRS( Vector3.zero, Quaternion.identity, new Vector3( Screen.width / 1600.0f, Screen.height / 900.0f, 1.0f ) );
+
+		// If there's a message array to be displayed (aka a voiced event)
+		if(currMessageIndex < messageArray.Length)
+			GUI.Label(new Rect(xEventSize,yEventSize,posOfGUI.x,posOfGUI.y), messageArray[currMessageIndex], fontStyle);
+
+		// If there's a single message to display (picking up something)
 		GUI.Label(new Rect(xSize,ySize,posOfGUI.x,posOfGUI.y), currMessage, fontStyle);
 	}
 
-	// Makes the text "dissapear" from the screen
+	// Changes the text to the next message
+	void ChangeToNextMessageInArray()
+	{
+		if(currMessageIndex > messageArray.Length)
+			Array.Clear(messageArray,0,messageArray.Length);
+		else
+		{
+			currMessageIndex++;
+			Invoke("ChangeToNextMessageInArray",timeToChange);
+		}
+	}
+
+	// Assigns a new message array for this script to display
+	public void AssignNewMessageArray(string[] newMessage)
+	{
+		messageArray = newMessage;
+		currMessageIndex = 0;
+		Invoke("ChangeToNextMessageInArray",timeToChange);
+	}
+
+	// Makes the one line of text to dissapear from the screen
 	void MakeMessageDissapear()
 	{
 		currMessage = "";
 	}
 
-	// Changes the text to be what's displayed on the screen
-	public void ChangeText(string newMessage)
+	// Assigns one line of text to appear for X amount of seconds.
+	public void DisplayOneMessage(string newMessage)
 	{
 		currMessage = newMessage;
 		if(IsInvoking("MakeMessageDissapear") == false)
-			Invoke("MakeMessageDissapear",timeToDissapear);
+			Invoke("MakeMessageDissapear",timeToChange);
 		else
-			Invoke("MakeMessageDissapear",timeToDissapear * 2);
+			Invoke("MakeMessageDissapear",timeToChange * 2);
 	}
 
 }
