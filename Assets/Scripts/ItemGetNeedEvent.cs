@@ -2,19 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 
-//This event occurs if the player inspects it. The player will be given an item/uses an item if they have it. If the player is getting an item, the item list MUST have only one item.
+//This event occurs if the player inspects it. The player will be given an item/uses an item if they have it. 
+//If the player is getting an item, the item list MUST have only one item.
 public class ItemGetNeedEvent : MonoBehaviour {
 
 	public List<string> itemAvailableOrNeed = new List<string>();			//What items can the player acquire/use here?
 	public bool isUsingItemEvent;											//Is the player using an item here?
-	public bool partOfEventChain;											//Is this object part of the RoomEvents? If so, mark it here!
-	public bool destroyOnComplete;											//Will this object get removed once it's cleared?
+	public bool deactivateOnComplete;										//Will this object get deactivated upon being complete?
 
 	//Checks whether this event will be destroyed once it's complete.
 	void Update()
 	{
-		if(gameObject.GetComponent<HasSolvedEvent>().GetIfSolvedEvent() == true && destroyOnComplete == true)
-			Destroy(gameObject);
+		if(gameObject.GetComponent<HasSolvedEvent>().GetIfSolvedEvent() == true && deactivateOnComplete == true)
+			gameObject.SetActive(false);
 	}
 
 	//This determines if the player is inspecting said spot and will either pick up an item or use an item.
@@ -48,21 +48,12 @@ public class ItemGetNeedEvent : MonoBehaviour {
 						player.AddToInventory(itemAvailableOrNeed[0]);
 						gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
 					}
+
+					gameObject.GetComponent<HasSolvedEvent>().CheckIfPartOfChainEvent();
 				}
 				player.isInteracting = false;
 			}
 		}
 	}
-
-	//If this event is part of the RoomEvents, the gameobject with RoomEvents will check if it can spawn any more events
-	void OnDestroy()
-	{
-		if(GameObject.FindGameObjectWithTag("RoomEvents") != null && partOfEventChain == true)
-		{
-			GameObject.FindGameObjectWithTag("RoomEvents").GetComponent<RoomEvents>().currEventsComplete++;
-
-			if(GameObject.FindGameObjectWithTag("RoomEvents").GetComponent<RoomEvents>().CheckIfCanSpawnMore())
-				GameObject.FindGameObjectWithTag("RoomEvents").GetComponent<RoomEvents>().SpawnEvents();	
-		}
-	}
+		
 }

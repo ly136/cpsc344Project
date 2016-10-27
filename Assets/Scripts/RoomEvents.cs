@@ -3,41 +3,57 @@ using System.Collections;
 using System.Collections.Generic;
 
 /*  This script keeps track of what events are currently in the room as well as what needs to be spawned in once the first item is done.	
- *  This works in that the first event(s) is/are already placed in the scene. Then, IN ORDER OF WHEN THEY SHOULD APPEAR, have the eventList contain the prefabs of 
- *  the events that it needs to spawn into the room. eventPlacement contains the gameobjects where these events will be placed at (ALSO IN THE SAME ORDER AS THE
- * 	eventList OBJECTS. The numbOfEventsToSpawn indicate how many events will be in the current scene at that indec value. (So at index 0 should be the number of
- * 	events currently in the room right now, and index1 has the number of events that will spawn once all of those events in the room are gone.)
+ *  This works in that all of the events that need to occur are in the room. Deactivate all of the events that aren't going to be active when the player
+ *  first enters the room and add those to eventList. Each index point in numbOfEventsToSpawn corresponds to how many events in eventList will be reactivated
+ *  when currEventsComplete == numbOfEventsToSpawn[currIndex]. 
+ * 
+ * 	Ex: In the initial round, I want 4 events to be done before activating more, so numbOfEventsToSpawn[0] = 4. 
+ * 	Ex: In the next round, I want 2 new events to be activated. numbOfEventsToSpawn[1] = 2
  */
 
 public class RoomEvents : MonoBehaviour {
 
-	public List<GameObject> eventList = new List<GameObject>();			//Contains all of the events that are in the room
-	public List<GameObject> eventPlacement = new List<GameObject>();	//Contains the places where the event will spawn accordingly
-	public int[] numbOfEventsToSpawn;									//How many events will spawn in each iteration?
-	public int currEventsComplete;										//How many events did the player complete that are related to this script?
+	public List<GameObject> eventList = new List<GameObject>();			//Contains all of the events that are associated with bein activated in a aequence
+	public int[] numbEventsActivatedPerRound;							//How many events will activate in each iteration?
 
-	private int currOnEventSpawnIndex = 0;								//The current index that works with the int array
-
-	//Spawns the next set of events into the room
-	public void SpawnEvents()
+	private int currOnEventActiveIndex = 0;								//The current index that works with the int array
+		
+	//Activates the next set of events into the room.
+	void ActivateNextEvents()
 	{
-		for(int i = 0; i < numbOfEventsToSpawn[currOnEventSpawnIndex]; i++)
+		int numbActivatedEvents = 0;
+		int eventListIndex = 0;
+
+		if(currOnEventActiveIndex + 1 < numbEventsActivatedPerRound.Length)
 		{
-			Instantiate(eventList[i], eventPlacement[i].transform.position, Quaternion.identity);
-			eventList.Remove(eventList[i]);
-			eventPlacement.Remove(eventPlacement[i]);
+			currOnEventActiveIndex++;
+			while(numbActivatedEvents != numbEventsActivatedPerRound[currOnEventActiveIndex] && eventListIndex < eventList.Count)
+			{
+				if(eventList[eventListIndex].GetComponent<HasSolvedEvent>().hasSolvedEvent == false)
+				{
+					eventList[eventListIndex].SetActive(true);
+					numbActivatedEvents++;
+				}
+				eventListIndex++;
+			}
+		}
+	}
+
+	//Checks if the number of completed events if the number of finished events == the number of events needed to continue the chain.
+	public void CheckIfCanActivateEvents()
+	{
+		int numbEventsComplete = 0;
+
+		for(int i = 0; i < numbEventsActivatedPerRound[currOnEventActiveIndex]; i++)
+		{
+			if(eventList[i].activeInHierarchy == false)
+				numbEventsComplete++;
+			else if(eventList[i].GetComponent<HasSolvedEvent>().hasSolvedEvent == true)
+				numbEventsComplete++;
 		}
 
-		if(currOnEventSpawnIndex < numbOfEventsToSpawn.Length)
-			currOnEventSpawnIndex++;
+		if(numbEventsComplete == numbEventsActivatedPerRound[currOnEventActiveIndex])
+			ActivateNextEvents();
 	}
-
-	//Checks if the number of event list isn't at the end as well as checking if all of the events active right now are done.
-	public bool CheckIfCanSpawnMore()
-	{
-		if(currOnEventSpawnIndex < numbOfEventsToSpawn.Length && currEventsComplete == numbOfEventsToSpawn[currOnEventSpawnIndex])
-			return true;
-		return false;
-	}
-
+		
 }

@@ -11,6 +11,7 @@ public class PlayerActions : MonoBehaviour {
 	public float walkAcceleleration = 100f;				//How fast will the player accelerate?
 	public float maxWalkSpeed = 2f;						//The max speed the player can move
 	public float maxFallSpeed = 10f;
+	public bool canMove = true;							//Can the player move around now?
 	public bool isInteracting = false;					//Is the player interacting with anything?
 	public bool isGrounded = false;						//Is the player on the floor?
 	public GameObject cameraControl;					//The camera control attatched to the player
@@ -18,12 +19,6 @@ public class PlayerActions : MonoBehaviour {
 	private Rigidbody playerControl;					//The rigidbody controller attatched to the player.
 	private Vector3 horizontalMovement;					//Used to constrain the player's top speed
 	private Vector3 verticalMovement;					//Used to constrain the player's falling speed.
-
-	//Makes sure there's only one player in the room.
-	void Awake()
-	{
-		DontDestroyOnLoad(this.gameObject);
-	}
 
 	//Assigns the playerController to a private variable.
 	void Start()
@@ -34,7 +29,7 @@ public class PlayerActions : MonoBehaviour {
 	//Checks if the player's hit the interact button. Else, the player is moving around.
 	void Update () 
 	{
-		if(isInteracting == false)
+		if(canMove == true)
 		{
 			transform.rotation = Quaternion.Euler(0,cameraControl.GetComponent<MouseCamera>().currentYRotation,0);
 			if(isGrounded == false)
