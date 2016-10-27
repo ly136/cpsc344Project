@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//This is put on all events that can be solved. It simply has one variable, so any event can have this regardless on what it is.
-//This also checks if the event solved was part of the RoomEvent event.
+// This is put on all events that can be solved. It simply has one variable, so any event can have this regardless on what it is.
+// This also checks if the event solved was part of the RoomEvent event.
 public class HasSolvedEvent : MonoBehaviour {
 
 	public bool hasSolvedEvent;		//Has this event been solved?
@@ -25,11 +25,8 @@ public class HasSolvedEvent : MonoBehaviour {
 	//Does a check to see if this event is part of the RoomEvents script if it exists.
 	public void CheckIfPartOfChainEvent()
 	{
-		if(hasSolvedEvent == false)
-		{
-			if(GameObject.FindGameObjectWithTag("RoomEvents") != null && partOfEventChain == true)
-				GameObject.FindGameObjectWithTag("RoomEvents").GetComponent<RoomEvents>().CheckIfCanActivateEvents();
-		}
+		if(GameObject.FindGameObjectWithTag("RoomEvents") != null && partOfEventChain == true)
+			GameObject.FindGameObjectWithTag("RoomEvents").GetComponent<RoomEvents>().CheckIfCanActivateEvents();
 	}
 
 }

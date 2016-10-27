@@ -29,6 +29,10 @@ public class SoundEvent : MonoBehaviour {
 				if(GameObject.Find("SoundPlayer").GetComponent<AudioSource>().isPlaying == false)
 					GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(soundBite,1f);
 			}
+
+			// Insert subtitles for sound events here:
+			if(gameObject.GetComponent<EventSubtitles>() != null)
+				gameObject.GetComponent<EventSubtitles>().GiveSubTitlesToPlayer();
 		}
 	}
 }

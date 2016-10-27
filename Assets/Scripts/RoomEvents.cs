@@ -5,18 +5,20 @@ using System.Collections.Generic;
 /*  This script keeps track of what events are currently in the room as well as what needs to be spawned in once the first item is done.	
  *  This works in that all of the events that need to occur are in the room. Deactivate all of the events that aren't going to be active when the player
  *  first enters the room and add those to eventList. Each index point in numbOfEventsToSpawn corresponds to how many events in eventList will be reactivated
- *  when currEventsComplete == numbOfEventsToSpawn[currIndex]. 
+ *  when currEventsComplete == numbEventsActivatedList[numbEventsActivatedIndex]. 
  * 
- * 	Ex: In the initial round, I want 4 events to be done before activating more, so numbOfEventsToSpawn[0] = 4. 
- * 	Ex: In the next round, I want 2 new events to be activated. numbOfEventsToSpawn[1] = 2
+ * 	Ex: In the beginning, I want 4 events to be done before activating more...	numbEventsActivatedList[0] = 4. 
+ * 		Once I reach 4 finished events, I want 2 events to activate...	 		numbEventsActivatedList[1] = 2.
+ * 		Then, once I hit 2 finished events, I want to activate 3 events... 		numbEventsActivatedList[2] = 3.
+ * 		After finishing those 3 events, I want to activate 5 events...	 		numbEventsActivatedList[3] = 5.
  */
 
 public class RoomEvents : MonoBehaviour {
 
 	public List<GameObject> eventList = new List<GameObject>();			//Contains all of the events that are associated with bein activated in a aequence
-	public int[] numbEventsActivatedPerRound;							//How many events will activate in each iteration?
+	public int[] numbEventsActivatedList;								//The # of deactivated/complete events needed to activate more + the number of events to activate after hitting said amount
 
-	private int currOnEventActiveIndex = 0;								//The current index that works with the int array
+	private int numbEventsActivatedIndex = 0;							//The current index that works with the int array
 		
 	//Activates the next set of events into the room.
 	void ActivateNextEvents()
@@ -24,10 +26,10 @@ public class RoomEvents : MonoBehaviour {
 		int numbActivatedEvents = 0;
 		int eventListIndex = 0;
 
-		if(currOnEventActiveIndex + 1 < numbEventsActivatedPerRound.Length)
+		if(numbEventsActivatedIndex + 1 < numbEventsActivatedList.Length)
 		{
-			currOnEventActiveIndex++;
-			while(numbActivatedEvents != numbEventsActivatedPerRound[currOnEventActiveIndex] && eventListIndex < eventList.Count)
+			numbEventsActivatedIndex++;
+			while(numbActivatedEvents != numbEventsActivatedList[numbEventsActivatedIndex] && eventListIndex < eventList.Count)
 			{
 				if(eventList[eventListIndex].GetComponent<HasSolvedEvent>().hasSolvedEvent == false)
 				{
@@ -44,15 +46,26 @@ public class RoomEvents : MonoBehaviour {
 	{
 		int numbEventsComplete = 0;
 
-		for(int i = 0; i < numbEventsActivatedPerRound[currOnEventActiveIndex]; i++)
+		if(numbEventsActivatedIndex == 0)
 		{
-			if(eventList[i].activeInHierarchy == false)
-				numbEventsComplete++;
-			else if(eventList[i].GetComponent<HasSolvedEvent>().hasSolvedEvent == true)
-				numbEventsComplete++;
+			for(int i = 0; i < numbEventsActivatedList[numbEventsActivatedIndex]; i++)
+			{
+				if(eventList[i].GetComponent<HasSolvedEvent>().hasSolvedEvent == true)
+					numbEventsComplete++;
+			}
 		}
-
-		if(numbEventsComplete == numbEventsActivatedPerRound[currOnEventActiveIndex])
+		else
+		{
+			int lastValue = numbEventsActivatedList[numbEventsActivatedIndex - 1];
+			int toNextValue = lastValue + numbEventsActivatedList[numbEventsActivatedIndex];
+			for(int i = lastValue; i < toNextValue; i++)
+			{
+				if(eventList[i].GetComponent<HasSolvedEvent>().hasSolvedEvent == true)
+					numbEventsComplete++;
+			}
+		}
+			
+		if(numbEventsComplete == numbEventsActivatedList[numbEventsActivatedIndex])
 			ActivateNextEvents();
 	}
 		

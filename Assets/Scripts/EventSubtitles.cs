@@ -4,25 +4,16 @@ using System.Collections;
 // This event contains subtitles for said event.
 public class EventSubtitles : MonoBehaviour {
 
-	public string[] subTitles;
-	public bool hasGivenSubs;
+	public string[] subTitles;		// The string messages that will be outputted for this event.
+	public bool hasGivenSubs;		// Did the subtitles for this event has already been given?
 
-	void OnTriggerEnter(Collider other)
+	// This finds the Player Message object and gives the subtitles to them. This method is called in specific scipts.
+	public void GiveSubTitlesToPlayer()
 	{
-		if(other.gameObject.tag == "Player" && hasGivenSubs == false)
+		if(hasGivenSubs == false)
 		{
-			if(gameObject.tag == "InspectEvent")
-			{
-				if(other.GetComponent<PlayerActions>().isInteracting == true)
-					GameObject.Find("Main Camera").GetComponent<PlayerMessage>().AssignNewMessageArray(subTitles);
-
-				hasGivenSubs = true;
-			}
-			else if(gameObject.tag == "ApproachEvent")
-			{
-				GameObject.Find("Main Camera").GetComponent<PlayerMessage>().AssignNewMessageArray(subTitles);
-				hasGivenSubs = true;
-			}
+			GameObject.Find("Main Camera").GetComponent<PlayerMessage>().AssignNewMessageArray(subTitles);
+			hasGivenSubs = true;
 		}
 	}
 }

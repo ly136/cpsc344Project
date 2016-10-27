@@ -4,7 +4,7 @@ using System.Collections;
 // This class will be used to see if inspecting this object will trigger a switch.
 public class SwitchInspect : MonoBehaviour {
 
-	public GameObject switchReceiver;	//Which Gameobject are these all related to?
+	public GameObject switchReceiver;	//Which Gameobject are these activating towards?
 	public bool isSwitchActivated;		//Is the switch turned on?
 
 	// This checks if the player has inspected the object to turn on/off the switch.

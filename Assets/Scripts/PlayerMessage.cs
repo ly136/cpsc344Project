@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 // This script prints out what the player has gotten to the screen. It'll appear for X seconds and then dissapear. If the player gets another item, that 
@@ -6,9 +7,6 @@ using System.Collections;
 
 // This also contains stuff for having subtitles. This works in that each event w/voices has a string array of sentences that represent what's going on.
 // Each sentence is displyed on screen for X seconds.
-using System;
-
-
 public class PlayerMessage : MonoBehaviour {
 
 	public GUIStyle fontStyle = new GUIStyle();		//The font that will be used for this
@@ -54,7 +52,13 @@ public class PlayerMessage : MonoBehaviour {
 		}
 	}
 
-	// Assigns a new message array for this script to display
+	// Makes the one line of text to dissapear from the screen
+	void MakeMessageDissapear()
+	{
+		currMessage = "";
+	}
+
+	// Assigns a new message array for this script to display. Used to diaplay more than one line of messages (subtitles)
 	public void AssignNewMessageArray(string[] newMessage)
 	{
 		messageArray = newMessage;
@@ -62,13 +66,7 @@ public class PlayerMessage : MonoBehaviour {
 		Invoke("ChangeToNextMessageInArray",timeToChange);
 	}
 
-	// Makes the one line of text to dissapear from the screen
-	void MakeMessageDissapear()
-	{
-		currMessage = "";
-	}
-
-	// Assigns one line of text to appear for X amount of seconds.
+	// Assigns one line of text to appear for X amount of seconds. Used for getting/using items/activating something.
 	public void DisplayOneMessage(string newMessage)
 	{
 		currMessage = newMessage;

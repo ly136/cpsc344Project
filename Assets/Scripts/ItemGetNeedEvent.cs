@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-//This event occurs if the player inspects it. The player will be given an item/uses an item if they have it. 
-//If the player is getting an item, the item list MUST have only one item.
+// This event occurs if the player inspects it. The player will be given an item/uses an item if they have it. 
+// If the player is getting an item, the item list MUST have only one item.
 public class ItemGetNeedEvent : MonoBehaviour {
 
 	public List<string> itemAvailableOrNeed = new List<string>();			//What items can the player acquire/use here?

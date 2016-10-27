@@ -10,6 +10,7 @@ public class InfiniteStairs : MonoBehaviour {
 
 	public GameObject warpSpot;			//Where will the player be positioned at?
 
+	//When the player reaches this spot where the script is active, the player teleports to the location specified by warpSpot
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.gameObject.tag == "Player")
