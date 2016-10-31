@@ -7,23 +7,19 @@ using System.Collections.Generic;
 
 public class PlayerActions : MonoBehaviour {
 
+	public GameObject cameraControl;					//The camera control attatched to the player
 	public List<string> itemList = new List<string>();	//The items the player will collect will be stored as strings, since they aren't that complicated.
+
 	public float walkAcceleleration = 100f;				//How fast will the player accelerate?
 	public float maxWalkSpeed = 2f;						//The max speed the player can move
 	public float maxFallSpeed = 10f;
+	public bool canMove = true;							//Can the player move around now?
 	public bool isInteracting = false;					//Is the player interacting with anything?
 	public bool isGrounded = false;						//Is the player on the floor?
-	public GameObject cameraControl;					//The camera control attatched to the player
 
 	private Rigidbody playerControl;					//The rigidbody controller attatched to the player.
 	private Vector3 horizontalMovement;					//Used to constrain the player's top speed
 	private Vector3 verticalMovement;					//Used to constrain the player's falling speed.
-
-	//Makes sure there's only one player in the room.
-	void Awake()
-	{
-		DontDestroyOnLoad(this.gameObject);
-	}
 
 	//Assigns the playerController to a private variable.
 	void Start()
@@ -34,7 +30,7 @@ public class PlayerActions : MonoBehaviour {
 	//Checks if the player's hit the interact button. Else, the player is moving around.
 	void Update () 
 	{
-		if(isInteracting == false)
+		if(canMove == true)
 		{
 			transform.rotation = Quaternion.Euler(0,cameraControl.GetComponent<MouseCamera>().currentYRotation,0);
 			if(isGrounded == false)
@@ -85,9 +81,19 @@ public class PlayerActions : MonoBehaviour {
 	void OnTriggerStay(Collider other)
 	{
 		if(other.gameObject.tag == "InspectEvent" && Input.GetKeyDown(KeyCode.E) == true)
+		{
 			isInteracting = true;
+			Invoke("ResetInspecting",3f);
+		}
 		if(other.gameObject.tag == "Ground")
 			isGrounded = true;
+	}
+
+	// If the player is still "inspecting" something after 3 seconds, it is manually reset back to normal.
+	void ResetInspecting()
+	{
+		if(isInteracting == true)
+			isInteracting = false;
 	}
 
 	//Removes an item from the inventory
@@ -96,7 +102,7 @@ public class PlayerActions : MonoBehaviour {
 		if(CheckIfPlayerHasItem(itemToRemove) == true)
 		{
 			itemList.Remove(itemToRemove);
-			print("You removed " + itemToRemove);
+			GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Used " + itemToRemove);
 		}
 	}
 
@@ -104,7 +110,7 @@ public class PlayerActions : MonoBehaviour {
 	public void AddToInventory(string itemToAdd)
 	{
 		itemList.Add(itemToAdd);
-		print("You got " + itemToAdd);
+		GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Obtained " + itemToAdd);
 	}
 
 	//Checks if the player has the said item in their inventory and returns true if they do.

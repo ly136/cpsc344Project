@@ -204,7 +204,6 @@ MonoBehaviour:
   itemAvailableOrNeed:
   - Key
   isUsingItemEvent: 1
-  partOfEventChain: 0
   destroyOnComplete: 0
 --- !u!114 &114000013080520052
 MonoBehaviour:
@@ -218,3 +217,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSolvedEvent: 0
+  partOfEventChain: 0

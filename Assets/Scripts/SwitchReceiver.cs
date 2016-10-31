@@ -14,12 +14,10 @@ public class SwitchReceiver : MonoBehaviour {
 			if(switchInspectObjects[i].GetComponent<SwitchInspect>().isSwitchActivated == false)
 			{
 				gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(false);
-				print("I'm closed...");
 				return;
 			}
 		}
 		gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
-		print("I'm open!");
 	}
 
 }
