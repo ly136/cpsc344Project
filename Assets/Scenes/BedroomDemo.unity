@@ -1340,7 +1340,7 @@ MonoBehaviour:
   - paper3
   - paper4
   isUsingItemEvent: 1
-  hasSolvedEvent: 0
+  partOfEventChain: 0
   destroyOnComplete: 0
 --- !u!23 &142120112
 MeshRenderer:
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   itemAvailableOrNeed:
   - paper2
   isUsingItemEvent: 0
-  hasSolvedEvent: 0
+  partOfEventChain: 0
   destroyOnComplete: 1
 --- !u!65 &142212209
 BoxCollider:
@@ -2655,6 +2655,7 @@ Transform:
   - {fileID: 1035010616}
   - {fileID: 1336238755}
   - {fileID: 1182712539}
+  - {fileID: 864027171}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &349058442
@@ -3527,7 +3528,7 @@ Rigidbody:
   m_GameObject: {fileID: 551435819}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -3608,8 +3609,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 551435819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: 4.9, z: 68.7}
-  m_LocalScale: {x: 3, y: 4.4071994, z: 3}
+  m_LocalPosition: {x: 139.7, y: 4, z: 0.5}
+  m_LocalScale: {x: 3, y: 4.0507245, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1721052514}
@@ -5758,6 +5759,98 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 850420092}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &864027170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 864027171}
+  - 33: {fileID: 864027175}
+  - 64: {fileID: 864027174}
+  - 23: {fileID: 864027173}
+  - 65: {fileID: 864027172}
+  m_Layer: 0
+  m_Name: HallwayFloor (2)
+  m_TagString: Ground
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &864027171
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864027170}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 38.73, y: 7.8, z: 0}
+  m_LocalScale: {x: 1.088958, y: 1, z: 5.624139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 329161472}
+  m_RootOrder: 3
+--- !u!65 &864027172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864027170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.95, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &864027173
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864027170}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &864027174
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864027170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &864027175
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864027170}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &877000470
 GameObject:
   m_ObjectHideFlags: 0
@@ -6548,6 +6641,98 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 986880268}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &999730843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 999730848}
+  - 33: {fileID: 999730847}
+  - 64: {fileID: 999730846}
+  - 23: {fileID: 999730845}
+  - 65: {fileID: 999730844}
+  m_Layer: 0
+  m_Name: Slope
+  m_TagString: Ground
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &999730844
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999730843}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &999730845
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999730843}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &999730846
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999730843}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &999730847
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999730843}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &999730848
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999730843}
+  m_LocalRotation: {x: -0.010396079, y: -0.018931828, z: 0.23068598, w: 0.9727886}
+  m_LocalPosition: {x: 170.5, y: 5.4, z: 0.3}
+  m_LocalScale: {x: 2.4252946, y: 0.8777301, z: 0.5275572}
+  m_LocalEulerAnglesHint: {x: -0.651, y: -2.3160002, z: 26.582}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &1006337220
 GameObject:
   m_ObjectHideFlags: 0
@@ -6999,7 +7184,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 1.14, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1035010618
 MeshRenderer:
@@ -7636,7 +7821,7 @@ MonoBehaviour:
   itemAvailableOrNeed:
   - paper4
   isUsingItemEvent: 0
-  hasSolvedEvent: 0
+  partOfEventChain: 0
   destroyOnComplete: 1
 --- !u!65 &1158181759
 BoxCollider:
@@ -7741,7 +7926,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 0.61, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1182712541
 MeshRenderer:
@@ -8524,7 +8709,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 0.33, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1336238757
 MeshRenderer:
@@ -10404,7 +10589,7 @@ MonoBehaviour:
   itemAvailableOrNeed:
   - paper3
   isUsingItemEvent: 0
-  hasSolvedEvent: 0
+  partOfEventChain: 0
   destroyOnComplete: 1
 --- !u!65 &1535151184
 BoxCollider:
@@ -10821,7 +11006,7 @@ MonoBehaviour:
   - paper3
   - paper4
   isUsingItemEvent: 1
-  hasSolvedEvent: 0
+  partOfEventChain: 0
   destroyOnComplete: 0
 --- !u!23 &1575041250
 MeshRenderer:
@@ -11495,7 +11680,7 @@ GameObject:
   - 65: {fileID: 1700053645}
   m_Layer: 0
   m_Name: HallwayFloor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11523,7 +11708,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 1.12, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1700053646
 MeshRenderer:
@@ -11672,6 +11857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1075699cf55c14c6799b88d2cee736ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onlyHorizontalMovement: 0
   lookSensitivity: 5
   yRotation: 0
   xRotation: 0
@@ -12082,7 +12268,7 @@ MonoBehaviour:
   itemAvailableOrNeed:
   - Charger
   isUsingItemEvent: 0
-  hasSolvedEvent: 0
+  partOfEventChain: 0
   destroyOnComplete: 0
 --- !u!23 &1803189921
 MeshRenderer:
@@ -12235,7 +12421,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.2204459e-16, z: 9.999999}
+  m_Size: {x: 10, y: 0.55, z: 9.999999}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1823120161
 GameObject:
@@ -12459,7 +12645,7 @@ MonoBehaviour:
   itemAvailableOrNeed:
   - paper1
   isUsingItemEvent: 0
-  hasSolvedEvent: 0
+  partOfEventChain: 0
   destroyOnComplete: 1
 --- !u!65 &1836022742
 BoxCollider:
