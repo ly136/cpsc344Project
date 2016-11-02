@@ -69,11 +69,11 @@ public class PlayerMessage : MonoBehaviour {
 	// Assigns one line of text to appear for X amount of seconds. Used for getting/using items/activating something.
 	public void DisplayOneMessage(string newMessage)
 	{
+		if(IsInvoking("MakeMessageDissapear") == true)
+			CancelInvoke();
+		
 		currMessage = newMessage;
-		if(IsInvoking("MakeMessageDissapear") == false)
-			Invoke("MakeMessageDissapear",timeToChange);
-		else
-			Invoke("MakeMessageDissapear",timeToChange * 2);
+		Invoke("MakeMessageDissapear",timeToChange);
 	}
 
 }

@@ -45,6 +45,14 @@ public class ItemGetNeedEvent : MonoBehaviour {
 					}
 					else
 					{
+						if(GameObject.Find("LimitPlayerInventory") != null)
+						{
+							if(GameObject.Find("LimitPlayerInventory").GetComponent<LimitPlayerInv>().reachedMax == true)
+								return;
+							else
+								GameObject.Find("LimitPlayerInventory").GetComponent<LimitPlayerInv>().DecrementItemNumber();
+						}
+
 						player.AddToInventory(itemAvailableOrNeed[0]);
 						gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
 					}
