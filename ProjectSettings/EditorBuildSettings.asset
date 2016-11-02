@@ -11,7 +11,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scenes/title_screen.unity
   - enabled: 0
     path: Assets/Scenes/Menu Scenes/gameover_screen.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
   - enabled: 1
     path: Assets/Scenes/TestScene2.unity
@@ -19,3 +19,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScenes/title_screen.unity
   - enabled: 1
     path: Assets/Scenes/MenuScenes/gameover_screen.unity
+  - enabled: 1
+    path: Assets/Scenes/CleanBedroom.unity
+  - enabled: 1
+    path: Assets/Scenes/CleanLivingRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+  - enabled: 1
+    path: Assets/Scenes/MessyBedroom.unity
