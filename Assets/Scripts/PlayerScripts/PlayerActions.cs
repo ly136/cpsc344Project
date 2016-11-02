@@ -83,13 +83,13 @@ public class PlayerActions : MonoBehaviour {
 		if(other.gameObject.tag == "InspectEvent" && Input.GetKeyDown(KeyCode.E) == true)
 		{
 			isInteracting = true;
-			Invoke("ResetInspecting",3f);
+			Invoke("ResetInspecting",1f);
 		}
 		if(other.gameObject.tag == "Ground")
 			isGrounded = true;
 	}
 
-	// If the player is still "inspecting" something after 3 seconds, it is manually reset back to normal.
+	// If the player is still "inspecting" something after 1 second, it is manually reset back to normal.
 	void ResetInspecting()
 	{
 		if(isInteracting == true)

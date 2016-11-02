@@ -23,12 +23,12 @@ public class RoomEvents : MonoBehaviour {
 	//Activates the next set of events into the room.
 	void ActivateNextEvents()
 	{
-		int numbActivatedEvents = 0;
-		int eventListIndex = 0;
-
 		if(numbEventsActivatedIndex + 1 < numbEventsActivatedList.Length)
 		{
+			int eventListIndex = numbEventsActivatedList[numbEventsActivatedIndex];
+			int numbActivatedEvents = 0;
 			numbEventsActivatedIndex++;
+
 			while(numbActivatedEvents != numbEventsActivatedList[numbEventsActivatedIndex] && eventListIndex < eventList.Count)
 			{
 				if(eventList[eventListIndex].GetComponent<HasSolvedEvent>().hasSolvedEvent == false)

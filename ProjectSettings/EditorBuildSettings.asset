@@ -6,24 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/BedroomDemo.unity
-  - enabled: 0
-    path: Assets/Scenes/Menu Scenes/title_screen.unity
-  - enabled: 0
-    path: Assets/Scenes/Menu Scenes/gameover_screen.unity
-  - enabled: 0
-    path: Assets/Scenes/TestScene.unity
+    path: Assets/Scenes/TestArea/BedroomDemo.unity
   - enabled: 1
-    path: Assets/Scenes/TestScene2.unity
+    path: Assets/Scenes/TestArea/TestScene.unity
+  - enabled: 1
+    path: Assets/Scenes/TestArea/TestScene2.unity
   - enabled: 1
     path: Assets/Scenes/MenuScenes/title_screen.unity
   - enabled: 1
     path: Assets/Scenes/MenuScenes/gameover_screen.unity
   - enabled: 1
-    path: Assets/Scenes/CleanBedroom.unity
+    path: Assets/Scenes/MainLevels/CleanBedroom.unity
   - enabled: 1
-    path: Assets/Scenes/CleanLivingRoom.unity
+    path: Assets/Scenes/MainLevels/CleanLivingRoom.unity
   - enabled: 1
-    path: Assets/Scenes/Hospital.unity
+    path: Assets/Scenes/MainLevels/Hospital.unity
   - enabled: 1
-    path: Assets/Scenes/MessyBedroom.unity
+    path: Assets/Scenes/MainLevels/MessyBedroom.unity
