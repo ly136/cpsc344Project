@@ -32,6 +32,12 @@ public class PlayerActions : MonoBehaviour {
 	{
 		if(canMove == true)
 		{
+			if(Input.GetKeyDown(KeyCode.E) == true && isInteracting == false)
+			{
+				isInteracting = true;
+				Invoke("ResetInspecting",3f);
+			}
+				
 			transform.rotation = Quaternion.Euler(0,cameraControl.GetComponent<MouseCamera>().currentYRotation,0);
 			if(isGrounded == false)
 			{
@@ -80,11 +86,6 @@ public class PlayerActions : MonoBehaviour {
 	//If the player is within range of an interactive object, this will make the player inspect it.
 	void OnTriggerStay(Collider other)
 	{
-		if(other.gameObject.tag == "InspectEvent" && Input.GetKeyDown(KeyCode.E) == true)
-		{
-			isInteracting = true;
-			Invoke("ResetInspecting",1f);
-		}
 		if(other.gameObject.tag == "Ground")
 			isGrounded = true;
 	}

@@ -873,7 +873,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1 &579730413 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: 567ecc2380a7ac748885b769c9a04c52, type: 3}
@@ -998,7 +998,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 43.931004, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1001 &693552833
 Prefab:
   m_ObjectHideFlags: 0
@@ -1053,6 +1053,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80fdf0d7d7b68964294125f0ff541b3a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &712725952 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012012011208, guid: 8017ec666b42a624fb54607252ccba7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 332836085}
 --- !u!1 &766492506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1271,7 @@ Transform:
   - {fileID: 1867678866}
   - {fileID: 2068170509}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 8
 --- !u!1001 &1012084739
 Prefab:
   m_ObjectHideFlags: 0
@@ -1433,7 +1438,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 21.128, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!4 &1013377059 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013409032174, guid: bf5cd1d0cc5199f4eb7b5ecddf9e95e8,
@@ -1631,7 +1636,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 21.128, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1001 &1261318812
 Prefab:
   m_ObjectHideFlags: 0
@@ -1840,7 +1845,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 88.88901, y: 21.127, z: 21.645}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1001 &1538156428
 Prefab:
   m_ObjectHideFlags: 0
@@ -2063,6 +2068,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245ea9e634733487e88992aa9c41ffc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playUponCompleteEvent: {fileID: 712725952}
+  soundBite: {fileID: 8300000, guid: 3fd3ccfeb2f144489904f1ca4479c826, type: 3}
+  soundVolume: 0
+  delayBeforePlaying: 0
 --- !u!4 &1657170194
 Transform:
   m_ObjectHideFlags: 0
@@ -2075,7 +2084,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!4 &1714973753 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011024023396, guid: 18fab6ca44c3a6a49833af8576b9c89c,
