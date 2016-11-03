@@ -29,16 +29,20 @@ public class ItemGetNeedEvent : MonoBehaviour {
 				{
 					if(isUsingItemEvent == true)
 					{
+						print ("Test 1");
 						//We look through the player's inventory to see if this event has an item that the player can use. If the player has multiple items
 						for(int i = 0; i < player.GetInventoryLength(); i++)
 						{
+							
 							string currItem = player.GetItem(i);
 							if(itemAvailableOrNeed.Contains(currItem) == true)
 							{
+								print ("Test 2");
 								player.RemoveFromInventory(currItem);
 								itemAvailableOrNeed.Remove(currItem);
 								if(itemAvailableOrNeed.Count == 0)
 									gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
+								print("Test 3");
 								break;
 							}
 						}
