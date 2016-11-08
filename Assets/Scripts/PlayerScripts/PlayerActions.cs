@@ -35,7 +35,7 @@ public class PlayerActions : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.E) == true && isInteracting == false)
 			{
 				isInteracting = true;
-				Invoke("ResetInspecting",3f);
+				Invoke("ResetInspecting",0.5f);
 			}
 				
 			transform.rotation = Quaternion.Euler(0,cameraControl.GetComponent<MouseCamera>().currentYRotation,0);
@@ -76,13 +76,6 @@ public class PlayerActions : MonoBehaviour {
 			isGrounded = false;
 	}
 
-	//Checks if the player is on the ground or if they entered an area that has an approach event.
-	void OnTriggerEnter(Collider other)
-	{
-		if(other.gameObject.tag == "ApproachEvent")
-			isInteracting = true;
-	}
-
 	//If the player is within range of an interactive object, this will make the player inspect it.
 	void OnTriggerStay(Collider other)
 	{
@@ -90,7 +83,7 @@ public class PlayerActions : MonoBehaviour {
 			isGrounded = true;
 	}
 
-	// If the player is still "inspecting" something after 1 second, it is manually reset back to normal.
+	// If the player is still "inspecting" something after half of a second, it is manually reset back to normal.
 	void ResetInspecting()
 	{
 		if(isInteracting == true)
@@ -105,6 +98,12 @@ public class PlayerActions : MonoBehaviour {
 			itemList.Remove(itemToRemove);
 			GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Used " + itemToRemove);
 		}
+	}
+
+	// Removes all items from the player's inventory
+	public void RemoveAllItemsFromInventory()
+	{
+		itemList.Clear();
 	}
 
 	//Adds an item to the inventory.

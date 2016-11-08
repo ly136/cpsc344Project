@@ -28,7 +28,7 @@ public class SoundEvent : MonoBehaviour {
 	//The player will activate a sound bit if they are near this or if they inspect it.
 	void OnTriggerStay(Collider other)
 	{
-		if(other.gameObject.tag == "Player")
+		if(other.gameObject.tag == "Player" && playUponCompleteEvent == null)
 		{
 			PlayerActions player = other.gameObject.GetComponent<PlayerActions>();
 			if(gameObject.tag == "InspectEvent")
@@ -47,10 +47,12 @@ public class SoundEvent : MonoBehaviour {
 	void PlaySound()
 	{
 		if(GameObject.Find("SoundPlayer").GetComponent<AudioSource>().isPlaying == false)
+		{
 			GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(soundBite,1f);
 
-		// Insert subtitles for sound events here:
-		if(gameObject.GetComponent<EventSubtitles>() != null)
-			gameObject.GetComponent<EventSubtitles>().GiveSubTitlesToPlayer();
+			// Subtitles for the event (if they exist) are called here.
+			if(gameObject.GetComponent<EventSubtitles>() != null)
+				gameObject.GetComponent<EventSubtitles>().GiveSubTitlesToPlayer();
+		}
 	}
 }

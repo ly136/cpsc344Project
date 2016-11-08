@@ -17,7 +17,7 @@ public class MouseCamera : MonoBehaviour {
 	public float xRotationV;
 	public float lookSmoothDamp = 0.1f;			//How smooth the move will be
 
-	//This does the work of making sure the mouse acts as the camera.
+	// This does the work of making sure the mouse acts as the camera.
 	void Update()
 	{
 		yRotation += Input.GetAxis("Mouse X") * lookSensitivity;

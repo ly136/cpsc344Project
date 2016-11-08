@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 
 // This script prints out what the player has gotten to the screen. It'll appear for X seconds and then dissapear. If the player gets another item, that 
-// first text will get replaced and the new text will last for 3 seconds.
+// first text will get replaced and the new text will last for X seconds.
 
 // This also contains stuff for having subtitles. This works in that each event w/voices has a string array of sentences that represent what's going on.
 // Each sentence is displyed on screen for X seconds.
@@ -21,13 +21,13 @@ public class PlayerMessage : MonoBehaviour {
 	private Vector3 posOfGUI;						//Used to dynamically shape the font's position on screens <= 1600x900 resolution
 	private int currMessageIndex;					//Used in messageArray
 
-	//First, this function asjusts the GUI so it's centered around the camera
+	// First, this function asjusts the GUI so it's centered around the camera
 	void Start()
 	{
 		posOfGUI = GameObject.Find("Main Camera").GetComponent<Camera>().WorldToScreenPoint(gameObject.transform.position);
 	}
 
-	//Updates the GUI as well as setting the dynamic behavior of the text.
+	// Updates the GUI as well as setting the dynamic behavior of the text.
 	void OnGUI()
 	{
 		GUI.matrix = Matrix4x4.TRS( Vector3.zero, Quaternion.identity, new Vector3( Screen.width / 1600.0f, Screen.height / 900.0f, 1.0f ) );
@@ -40,12 +40,10 @@ public class PlayerMessage : MonoBehaviour {
 		GUI.Label(new Rect(xSize,ySize,posOfGUI.x,posOfGUI.y), currMessage, fontStyle);
 	}
 
-	// Changes the text to the next message
+	// Changes the text to the next message. If it reaches the end, the message displays stops.
 	void ChangeToNextMessageInArray()
 	{
-		if(currMessageIndex > messageArray.Length)
-			Array.Clear(messageArray,0,messageArray.Length);
-		else
+		if(currMessageIndex < messageArray.Length)
 		{
 			currMessageIndex++;
 			Invoke("ChangeToNextMessageInArray",timeToChange);
@@ -61,6 +59,9 @@ public class PlayerMessage : MonoBehaviour {
 	// Assigns a new message array for this script to display. Used to diaplay more than one line of messages (subtitles)
 	public void AssignNewMessageArray(string[] newMessage)
 	{
+		if(IsInvoking("ChangeToNextMessageInArray") == true)
+			CancelInvoke("ChangeToNextMessageInArray");
+
 		messageArray = newMessage;
 		currMessageIndex = 0;
 		Invoke("ChangeToNextMessageInArray",timeToChange);
@@ -70,7 +71,7 @@ public class PlayerMessage : MonoBehaviour {
 	public void DisplayOneMessage(string newMessage)
 	{
 		if(IsInvoking("MakeMessageDissapear") == true)
-			CancelInvoke();
+			CancelInvoke("MakeMessageDissapear");
 		
 		currMessage = newMessage;
 		Invoke("MakeMessageDissapear",timeToChange);

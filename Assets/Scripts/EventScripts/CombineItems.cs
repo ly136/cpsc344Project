@@ -9,15 +9,29 @@ public class CombineItems : MonoBehaviour {
 	public string newItem;					//What item will the player get once the player has all of the items?
 	public bool hasReceivedItem;			//Did the player receive the item?
 
-	// Use this for initialization
-	void Start () 
-	{
-	
-	}
-	
-	// Update is called once per frame
+	// Checks if the player h
 	void Update () 
 	{
-		
+		if(hasReceivedItem == false)
+		{
+			int itemCount = 0;
+			for(int i = 0; i < itemList.Length; i++)
+			{
+				if(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActions>().CheckIfPlayerHasItem(itemList[i]))
+					itemCount++;
+			}
+
+			if(itemCount == itemList.Length)
+				GetNewItem();
+		}
 	}
+
+	// Removes all of the items from the player and replaces it with one item. Deactivates this script as well.
+	void GetNewItem()
+	{
+		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActions>().RemoveAllItemsFromInventory();
+		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActions>().AddToInventory(newItem);
+		hasReceivedItem = true;
+	}
+		
 }

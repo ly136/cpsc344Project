@@ -24,7 +24,7 @@ GameObject:
   - 114: {fileID: 114000010288497768}
   m_Layer: 0
   m_Name: LockedEvent
-  m_TagString: InspectEvent
+  m_TagString: SwitchReceiver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ GameObject:
   - 23: {fileID: 23000011665909980}
   m_Layer: 0
   m_Name: DummySwitchDoor
-  m_TagString: SwitchReceiver
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
