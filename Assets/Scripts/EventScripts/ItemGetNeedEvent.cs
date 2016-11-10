@@ -17,6 +17,20 @@ public class ItemGetNeedEvent : MonoBehaviour {
 			gameObject.SetActive(false);
 	}
 
+	// Takes the particle emitter from the child and activates it when the player approaches this.
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.tag == "Player" && gameObject.transform.childCount > 0)
+			gameObject.transform.GetChild(0).gameObject.SetActive(true);
+	}
+
+	// When the player steps away from this object, the child will stop emitting particles
+	void OnTriggerExit(Collider other)
+	{
+		if(other.tag == "Player" && gameObject.transform.childCount > 0)
+			gameObject.transform.GetChild(0).gameObject.SetActive(false);
+	}
+
 	//This determines if the player is inspecting said spot and will either pick up an item or use an item.
 	void OnTriggerStay(Collider other)
 	{
