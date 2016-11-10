@@ -10,6 +10,8 @@ using System.Collections;
 public class PlayerMessage : MonoBehaviour {
 
 	public GUIStyle fontStyle = new GUIStyle();		//The font that will be used for this
+	public GUIStyle outlineStyle = new GUIStyle();	//The outline used to highlight the text.
+
 	public float xSize;								//The X axis that the text will appear for single messages
 	public float ySize;								//The Y axis that the text will appear for single messages						
 	public float xEventSize;						//The X axis that the text will appear for longer messages
@@ -34,10 +36,15 @@ public class PlayerMessage : MonoBehaviour {
 
 		// If there's a message array to be displayed (aka a voiced event)
 		if(currMessageIndex < messageArray.Length)
+		{
+			GUI.Label(new Rect(xEventSize + 1,yEventSize - 1,posOfGUI.x,posOfGUI.y), messageArray[currMessageIndex], outlineStyle);
 			GUI.Label(new Rect(xEventSize,yEventSize,posOfGUI.x,posOfGUI.y), messageArray[currMessageIndex], fontStyle);
+		}
 
 		// If there's a single message to display (picking up something)
+		GUI.Label(new Rect(xSize + 1,ySize - 1,posOfGUI.x,posOfGUI.y), currMessage, outlineStyle);
 		GUI.Label(new Rect(xSize,ySize,posOfGUI.x,posOfGUI.y), currMessage, fontStyle);
+
 	}
 
 	// Changes the text to the next message. If it reaches the end, the message displays stops.

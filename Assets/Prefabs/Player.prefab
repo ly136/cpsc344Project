@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012801395962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.489366, y: 3.73, z: 0.15534344}
+  m_LocalPosition: {x: 51.3, y: 2.06, z: -32.1}
   m_LocalScale: {x: 1.9175858, y: 2.6650825, z: 1.6639928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -214,6 +214,73 @@ MonoBehaviour:
     m_Normal:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_Alignment: 4
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  outlineStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
@@ -263,7 +330,7 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 70
     m_FontStyle: 0
     m_Alignment: 4
@@ -279,7 +346,7 @@ MonoBehaviour:
   xSize: 804
   ySize: 784
   xEventSize: 804
-  yEventSize: 284
+  yEventSize: 84
   currMessage: 
   timeToChange: 2
   messageArray: []

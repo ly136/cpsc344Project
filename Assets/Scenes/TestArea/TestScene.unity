@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - '...'
+  - Phone
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &275449671
@@ -1061,6 +1061,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4000014086180176, guid: 110d5ea4c8b7a4c4f855a2efd515a12a,
     type: 2}
   m_PrefabInternal: {fileID: 789344330}
+--- !u!1 &308973801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 308973803}
+  - 114: {fileID: 308973802}
+  m_Layer: 0
+  m_Name: LimitPlayerInventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &308973802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308973801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8f52d299df54f028f981fa604d6e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxItemsPickedUp: 3
+  reachedMax: 0
+--- !u!4 &308973803
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308973801}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 51.3, y: 2.06, z: -32.1}
+  m_LocalScale: {x: 1.9175858, y: 2.6650825, z: 1.6639928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1001 &346600544
 Prefab:
   m_ObjectHideFlags: 0
@@ -1231,48 +1273,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000014086180176, guid: 110d5ea4c8b7a4c4f855a2efd515a12a,
     type: 2}
   m_PrefabInternal: {fileID: 1063662759}
---- !u!1 &386060297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 386060299}
-  - 114: {fileID: 386060298}
-  m_Layer: 0
-  m_Name: LimitPlayerInventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &386060298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 386060297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab8f52d299df54f028f981fa604d6e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxItemsPickedUp: 3
-  reachedMax: 0
---- !u!4 &386060299
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 386060297}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.12904, y: -9.17108, z: 0.99404144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &389296875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,7 +3686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - '...'
+  - Family Photo
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &1160015773
@@ -4278,7 +4278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - '...'
+  - Rose
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &1399475756
@@ -4877,7 +4877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - '...'
+  - Doll
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &1647565605
@@ -5392,16 +5392,6 @@ Prefab:
     - target: {fileID: 4000012932472366, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013750147026, guid: 8e3bbaea498f047be8c23ba457a42b8c,
-        type: 2}
-      propertyPath: yEventSize
-      value: 84
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013927740174, guid: 8e3bbaea498f047be8c23ba457a42b8c,
-        type: 2}
-      propertyPath: maxWalkSpeed
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}

@@ -90,14 +90,15 @@ public class PlayerActions : MonoBehaviour {
 			isInteracting = false;
 	}
 
-	//Removes an item from the inventory
-	public void RemoveFromInventory(string itemToRemove)
+	//Removes an item from the inventory. Returns true if sucessful, else it's false.
+	public bool RemoveFromInventory(string itemToRemove)
 	{
 		if(CheckIfPlayerHasItem(itemToRemove) == true)
 		{
 			itemList.Remove(itemToRemove);
-			GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Used " + itemToRemove);
+			return true;
 		}
+		return false;
 	}
 
 	// Removes all items from the player's inventory
@@ -106,11 +107,19 @@ public class PlayerActions : MonoBehaviour {
 		itemList.Clear();
 	}
 
-	//Adds an item to the inventory.
-	public void AddToInventory(string itemToAdd)
+	//Adds an item to the inventory. Returns true if successful.
+	public bool AddToInventory(string itemToAdd)
 	{
+		if(GameObject.Find("LimitPlayerInventory") != null)
+		{
+			if(GameObject.Find("LimitPlayerInventory").GetComponent<LimitPlayerInv>().reachedMax == true)
+				return false;
+			else
+				GameObject.Find("LimitPlayerInventory").GetComponent<LimitPlayerInv>().DecrementItemNumber();
+		}
+
 		itemList.Add(itemToAdd);
-		GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Obtained " + itemToAdd);
+		return true;
 	}
 
 	//Checks if the player has the said item in their inventory and returns true if they do.
