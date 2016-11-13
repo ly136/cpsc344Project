@@ -16,13 +16,13 @@ public class SoundProximity : MonoBehaviour {
 		{
 			playerDisitance = Mathf.Abs((int)Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position));
 
-			if(playerDisitance < 10)
+			if(playerDisitance < 20)
 			{
-				if(playerDisitance >= 8)
+				if(playerDisitance >= 15)
 					GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(soundClip,startVolume);
-				else if(playerDisitance >= 5)
+				else if(playerDisitance >= 10)
 					GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(soundClip,startVolume + 1f);
-				else if(playerDisitance >= 2)
+				else if(playerDisitance >= 5)
 					GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(soundClip,startVolume + 2f);
 				else
 					GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(soundClip,startVolume + 3f);

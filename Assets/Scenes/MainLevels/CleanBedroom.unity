@@ -533,7 +533,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 190227428}
-  - 65: {fileID: 190227429}
   - 114: {fileID: 190227430}
   m_Layer: 0
   m_Name: NextArea
@@ -549,25 +548,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 190227427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0, z: 0}
+  m_LocalPosition: {x: -1.78, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 604641105}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
---- !u!65 &190227429
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 190227427}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_RootOrder: 16
 --- !u!114 &190227430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,9 +566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf1d898197c44dc98e36c1143a93dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeUponStart: 0
-  timeLimit: 0
-  nameOfScene: CleanLivingRoom
+  activeUponComplete: {fileID: 1657170191}
+  timeLimit: 2
+  nameOfScene: MessyBedroom
 --- !u!1001 &321735564
 Prefab:
   m_ObjectHideFlags: 0
@@ -643,6 +630,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 896029168}
     m_Modifications:
+    - target: {fileID: 114000011576780116, guid: 8017ec666b42a624fb54607252ccba7e,
+        type: 2}
+      propertyPath: itemAvailableOrNeed.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013996172122, guid: 8017ec666b42a624fb54607252ccba7e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.30323875
@@ -690,7 +682,7 @@ Prefab:
     - target: {fileID: 114000011576780116, guid: 8017ec666b42a624fb54607252ccba7e,
         type: 2}
       propertyPath: itemAvailableOrNeed.Array.data[1]
-      value: paper1
+      value: Laptop Password
       objectReference: {fileID: 0}
     - target: {fileID: 114000011576780116, guid: 8017ec666b42a624fb54607252ccba7e,
         type: 2}
@@ -1091,7 +1083,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1 &579730413 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: 567ecc2380a7ac748885b769c9a04c52, type: 3}
@@ -1153,7 +1145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - paper2
+  - Torn Paper Piece 2
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &604240474
@@ -1637,7 +1629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - paper1
+  - Torn Paper Piece 1
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &1012134552
@@ -1836,7 +1828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - paper4
+  - Torn Paper Piece 4
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &1211027090
@@ -2088,7 +2080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - paper3
+  - Torn Paper Piece 3
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &1453533167
@@ -2404,6 +2396,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1657170194}
   - 114: {fileID: 1657170193}
+  - 114: {fileID: 1657170192}
   m_Layer: 0
   m_Name: SoundEvent
   m_TagString: Untagged
@@ -2411,6 +2404,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1657170192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657170191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c91dcc53fcb44aaba6c92a34585ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasSolvedEvent: 0
+  partOfEventChain: 0
 --- !u!114 &1657170193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2422,10 +2428,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f81a2f95fe743deac63979a6deefde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 569794939}
   playUponCompleteEvent: {fileID: 332836086}
   soundBite: {fileID: 8300000, guid: 3fd3ccfeb2f144489904f1ca4479c826, type: 3}
   soundVolume: 1
   delayBeforePlaying: 3
+  playedAlready: 0
 --- !u!4 &1657170194
 Transform:
   m_ObjectHideFlags: 0
@@ -2438,7 +2446,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!4 &1714973753 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011024023396, guid: 18fab6ca44c3a6a49833af8576b9c89c,
@@ -2996,3 +3004,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf5cd1d0cc5199f4eb7b5ecddf9e95e8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2126523365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2126523367}
+  - 114: {fileID: 2126523366}
+  m_Layer: 0
+  m_Name: CombineItemEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2126523366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126523365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f71f1c612b25496fa821261a2377893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemList:
+  - Torn Paper Piece 1
+  - Torn Paper Piece 2
+  - Torn Paper Piece 3
+  - Torn Paper Piece 4
+  newItem: Laptop Password
+  hasReceivedItem: 0
+--- !u!4 &2126523367
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126523365}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -24.48, y: 4.32, z: 39.25}
+  m_LocalScale: {x: 0.3804928, y: 0.3804927, z: 0.3804927}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13

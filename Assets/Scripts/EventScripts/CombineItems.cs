@@ -31,7 +31,7 @@ public class CombineItems : MonoBehaviour {
 	{
 		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActions>().RemoveAllItemsFromInventory();
 		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActions>().AddToInventory(newItem);
-		GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Obtained " + newItem);
+		GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Combined items to obtain " + newItem);
 		hasReceivedItem = true;
 	}
 		

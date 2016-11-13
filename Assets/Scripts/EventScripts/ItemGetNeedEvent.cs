@@ -69,7 +69,13 @@ public class ItemGetNeedEvent : MonoBehaviour {
 										GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Used " + currItem);
 										itemAvailableOrNeed.Remove(currItem);
 										if(itemAvailableOrNeed.Count == 0)
+										{
 											gameObject.GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
+
+											// If this was associated with a locked door, we activate the door event.
+											if(gameObject.transform.parent.childCount > 1)
+												gameObject.transform.parent.GetChild(1).gameObject.SetActive(true);
+										}
 									}
 									break;
 								}
