@@ -20,7 +20,7 @@ public class MouseCamera : MonoBehaviour {
 	// Locks the curser to be in the center of the screen.
 	void Start()
 	{
-		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.lockState = CursorLockMode.Confined;
 	}
 
 	// This does the work of making sure the mouse acts as the camera.
