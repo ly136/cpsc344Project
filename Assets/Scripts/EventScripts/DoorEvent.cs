@@ -47,14 +47,14 @@ public class DoorEvent : MonoBehaviour {
 		if(isOpen == true)
 		{
 			//Insert something with animation to close the door. This is temp.
-			actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y - 2f, actualDoor.transform.position.z);
+			actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y - 6f, actualDoor.transform.position.z);
 			isOpen = false;
 
 		}
 		else
 		{
 			//Insert something with animation to open the door. This is temp.
-			actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y + 2f, actualDoor.transform.position.z);
+			actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y + 6f, actualDoor.transform.position.z);
 			isOpen = true;
 		}
 	}

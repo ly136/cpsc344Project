@@ -22,18 +22,9 @@ public class EventSubtitles : MonoBehaviour {
 	{
 		if(other.tag == "Player" && alreadyDisplaying == false)
 		{
-			gameObject.transform.GetChild(0).gameObject.SetActive(true);
-
 			if(gameObject.tag == "InspectEvent" && other.GetComponent<PlayerActions>().isInteracting == true)
 				GiveSubTitlesToPlayer();
 		}
-	}
-
-	// When the player steps away from this object, the child  will stop emitting particles
-	void OnTriggerExit(Collider other)
-	{
-		if(other.tag == "Player" && gameObject.tag == "InspectEvent")
-			gameObject.transform.GetChild(0).gameObject.SetActive(false);
 	}
 
 	// This allows the subtitles to reset, allowing the player to reinspect the event once the subtitles are done displaying.

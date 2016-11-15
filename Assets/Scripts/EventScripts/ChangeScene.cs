@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// This script changes the scene the player is in to another one, via a transition. It is activated by simply approaching it, or after a set time limit.
+// This script changes the scene the player is in to another one, via a transition. 
+// It is activated by simply approaching it or when an associated gameobject has its event complete.
 using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour {
