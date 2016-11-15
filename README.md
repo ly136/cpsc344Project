@@ -10,5 +10,5 @@ This contains the Unity files needed in order to make our Reflections.
 
 Achievments:
 - [X] Created Alpha Build
-- [] Created Beta Build
+- [X] Created Beta Build
 - [] Created Final Build
