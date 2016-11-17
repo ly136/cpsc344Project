@@ -31,7 +31,7 @@ public class ItemGetNeedEvent : MonoBehaviour {
 					if(isUsingItemEvent == true)
 					{
 						//If the items that the event is taking in have the value "...", this means anything can be accepted into the object.
-						if(itemAvailableOrNeed[0] == "...")
+						if(itemAvailableOrNeed[0] == "..." && player.GetInventoryLength() != 0)
 						{
 							GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Used " + player.GetItem(0));
 							player.RemoveFromInventory(player.GetItem(0));

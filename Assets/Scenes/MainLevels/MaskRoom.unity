@@ -686,6 +686,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 506758347}
   - 114: {fileID: 506758345}
+  - 65: {fileID: 506758346}
   m_Layer: 0
   m_Name: NextArea
   m_TagString: Untagged
@@ -704,9 +705,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf1d898197c44dc98e36c1143a93dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeUponComplete: {fileID: 1278776048}
+  activeUponComplete: {fileID: 0}
   timeLimit: 2
   nameOfScene: gameover_screen
+--- !u!65 &506758346
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 506758344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15, y: 1, z: 15}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &506758347
 Transform:
   m_ObjectHideFlags: 0
@@ -714,7 +727,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 506758344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.4, y: 5.5, z: 14.4}
+  m_LocalPosition: {x: -22.24, y: 5.5, z: 115.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1435,11 +1448,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
---- !u!1 &1278776048 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011417839848, guid: f43e3e41b54fc42aa87b9b0ec4146066,
-    type: 2}
-  m_PrefabInternal: {fileID: 679066488}
 --- !u!1 &1289391082
 GameObject:
   m_ObjectHideFlags: 0
