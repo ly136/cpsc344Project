@@ -2018,7 +2018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 1920732412}
   playUponCompleteEvent: {fileID: 380696841}
-  soundBite: {fileID: 8300000, guid: 07444a6f8c0851f40aa723c2182b98fc, type: 3}
+  soundBite: {fileID: 8300000, guid: 73668e807010742f5af3ff7f4e16c903, type: 3}
   soundVolume: 1
   delayBeforePlaying: 0
   playedAlready: 0

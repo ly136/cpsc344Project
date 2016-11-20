@@ -2430,7 +2430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 569794939}
   playUponCompleteEvent: {fileID: 332836086}
-  soundBite: {fileID: 8300000, guid: 3fd3ccfeb2f144489904f1ca4479c826, type: 3}
+  soundBite: {fileID: 8300000, guid: ec1b7bcdffbf8449c8050395755a91e2, type: 3}
   soundVolume: 1
   delayBeforePlaying: 2
   playedAlready: 0
