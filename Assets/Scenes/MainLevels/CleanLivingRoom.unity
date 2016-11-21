@@ -1347,17 +1347,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 840005307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f5aa3a892902470da57fb3d4e53f461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemAvailableOrNeed:
-  - '...'
-  - '...'
-  - '...'
-  - '...'
-  - '...'
-  isUsingItemEvent: 1
-  deactivateOnComplete: 1
+  usingItemSounds:
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  lastItemSoundList:
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  itemsPickedUp:
+  - {fileID: 1588049845}
+  - {fileID: 2699267}
+  - {fileID: 745192323}
+  - {fileID: 114232388}
+  - {fileID: 1871211745}
+  - {fileID: 170136935}
+  soundPlayer: {fileID: 769316121}
+  numbItemsAccepted: 5
+  volume: 1
+  hasFinished: 0
 --- !u!65 &840005310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2387,81 +2404,6 @@ Transform:
   - {fileID: 1188777799}
   m_Father: {fileID: 0}
   m_RootOrder: 5
---- !u!1 &1618469665
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1618469668}
-  - 114: {fileID: 1618469667}
-  - 114: {fileID: 1618469666}
-  - 114: {fileID: 1618469669}
-  m_Layer: 0
-  m_Name: UponIncineratorDone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1618469666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618469665}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5aa3a892902470da57fb3d4e53f461, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundList: []
-  completedObject: {fileID: 840005307}
-  hasFinished: 0
---- !u!114 &1618469667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618469665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f81a2f95fe743deac63979a6deefde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 769316121}
-  playUponCompleteEvent: {fileID: 840005307}
-  soundBite: {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  soundVolume: 1
-  delayBeforePlaying: 0
-  playedAlready: 0
---- !u!4 &1618469668
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618469665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62, y: 0, z: 65.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
---- !u!114 &1618469669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618469665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c91dcc53fcb44aaba6c92a34585ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasSolvedEvent: 0
-  partOfEventChain: 0
 --- !u!1 &1644068599
 GameObject:
   m_ObjectHideFlags: 0
