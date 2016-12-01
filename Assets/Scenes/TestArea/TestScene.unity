@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2353,6 +2353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3129131f0a7904500b7f726d777707d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  titleTime: 0200000004000000020000000200000005000000
   subTitles:
   - Why hello there!
   - You may be wondering something.
@@ -5386,7 +5387,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012932472366, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.06
+      value: 6.97
       objectReference: {fileID: 0}
     - target: {fileID: 4000012932472366, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5720,12 +5721,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2006526909}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f81a2f95fe743deac63979a6deefde, type: 3}
+  m_Script: {fileID: 11500000, guid: 874dd21603ee517458fb613b925d72d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 612234929}
   playUponCompleteEvent: {fileID: 0}
-  soundBite: {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  soundBite: {fileID: 8300000, guid: c77efa9c1897a40aead4cad67ae20d96, type: 3}
   soundVolume: 1
   delayBeforePlaying: 0
   playedAlready: 0
@@ -5814,6 +5815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3129131f0a7904500b7f726d777707d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  titleTime: 
   subTitles:
   - Hello!
 --- !u!114 &2006526917

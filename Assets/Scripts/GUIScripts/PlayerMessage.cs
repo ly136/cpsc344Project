@@ -19,7 +19,7 @@ public class PlayerMessage : MonoBehaviour {
 	public string currMessage;						//What's the current message being displayed?
 	public float timeToChange;						//How long will the message be displayed for?
 	public string[] messageArray;					//Where all of the messages that an event has is stored.
-
+    public int[] arrayTime;
 	private Vector3 posOfGUI;						//Used to dynamically shape the font's position on screens <= 1600x900 resolution
 	private int currMessageIndex;					//Used in messageArray
 
@@ -53,7 +53,7 @@ public class PlayerMessage : MonoBehaviour {
 		if(currMessageIndex < messageArray.Length)
 		{
 			currMessageIndex++;
-			Invoke("ChangeToNextMessageInArray",timeToChange);
+			Invoke("ChangeToNextMessageInArray", arrayTime[currMessageIndex]);
 		}
 	}
 
@@ -64,14 +64,15 @@ public class PlayerMessage : MonoBehaviour {
 	}
 
 	// Assigns a new message array for this script to display. Used to diaplay more than one line of messages (subtitles)
-	public void AssignNewMessageArray(string[] newMessage)
+	public void AssignNewMessageArray(string[] newMessage, int[] array)
 	{
-		if(IsInvoking("ChangeToNextMessageInArray") == true)
-			CancelInvoke("ChangeToNextMessageInArray");
 
+        if (IsInvoking("ChangeToNextMessageInArray") == true)
+			CancelInvoke("ChangeToNextMessageInArray");
+        arrayTime = array;
 		messageArray = newMessage;
 		currMessageIndex = 0;
-		Invoke("ChangeToNextMessageInArray",timeToChange);
+		Invoke("ChangeToNextMessageInArray",arrayTime[currMessageIndex]);
 	}
 
 	// Assigns one line of text to appear for X amount of seconds. Used for getting/using items/activating something.

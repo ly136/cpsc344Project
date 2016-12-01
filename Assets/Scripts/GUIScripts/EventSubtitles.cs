@@ -4,6 +4,7 @@ using System.Collections;
 // This event contains subtitles for audio, inspect, and approach events.
 public class EventSubtitles : MonoBehaviour {
 
+    public int[] titleTime;
 	public string[] subTitles;				// The string messages that will be outputted for this event.
 	public static bool alreadyDisplaying;	// Is a text array already sent to the PlayerMessage? 
 
@@ -36,7 +37,7 @@ public class EventSubtitles : MonoBehaviour {
 	// This finds the Player Message object and gives the subtitles to them.
 	public void GiveSubTitlesToPlayer()
 	{
-		GameObject.Find("Main Camera").GetComponent<PlayerMessage>().AssignNewMessageArray(subTitles);
+		GameObject.Find("Main Camera").GetComponent<PlayerMessage>().AssignNewMessageArray(subTitles,titleTime);
 		alreadyDisplaying = true;
 
 		float timeToReset = GameObject.Find("Main Camera").GetComponent<PlayerMessage>().timeToChange * subTitles.Length;
