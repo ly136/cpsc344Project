@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 2100000, guid: c266e62fb90465d4eb0e6496484f38eb, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e980bc7fbb00dc34b86b95ac842d1920, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -131,7 +131,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
 --- !u!1 &170446395
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +239,7 @@ Transform:
   m_Children:
   - {fileID: 654441783}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1001 &654441782
 Prefab:
   m_ObjectHideFlags: 0
@@ -1053,7 +1053,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &1168723075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,7 +1451,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 0.697, g: 0.747, b: 1, a: 0.597}
+  m_Color: {r: 0.5955882, g: 0.6535585, b: 1, a: 0.816}
   m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
@@ -1482,10 +1482,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1765129746}
-  m_LocalRotation: {x: 0.63920325, y: -0.0658166, z: 0.3577838, w: 0.67755306}
-  m_LocalPosition: {x: 42.2, y: 189.4, z: 232.3}
+  m_LocalRotation: {x: 0.62280846, y: 0.035426844, z: 0.4310362, w: 0.6519681}
+  m_LocalPosition: {x: -3, y: 248, z: 175}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 114.05701, y: -115.156006, z: -79.91}
+  m_LocalEulerAnglesHint: {x: 51.397003, y: 69.453, z: 103.36301}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1680,7 +1680,7 @@ Transform:
   - {fileID: 977037262}
   - {fileID: 783460933}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &2134314686
 Prefab:
   m_ObjectHideFlags: 0
@@ -1730,6 +1730,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
       propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
+      propertyPath: m_ReflectionProbeUsage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
+      propertyPath: m_LightProbeUsage
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
