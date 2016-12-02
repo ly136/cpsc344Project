@@ -29,10 +29,23 @@ public class ChangeScene : MonoBehaviour {
 	// If the player enters the hitbox of this gameobject, it loads the next scene.
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.tag == "Player")
+		if(other.gameObject.tag == "Player" && gameObject.tag != "InspectEvent")
 		{
 			other.GetComponent<PlayerActions>().canMove = false;
 			Invoke("TransitionToScene",timeLimit);
+		}
+	}
+
+	// If the player inspects this gameobject, they'll be warped.
+	void OnTriggerStay(Collider other)
+	{
+		if(other.gameObject.tag == "Player" && gameObject.tag == "InspectEvent")
+		{
+			if(other.gameObject.GetComponent<PlayerActions>().isInteracting == true)
+			{
+				other.GetComponent<PlayerActions>().canMove = false;
+				Invoke("TransitionToScene",timeLimit);
+			}
 		}
 	}
 

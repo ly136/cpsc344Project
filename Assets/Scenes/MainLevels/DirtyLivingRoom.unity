@@ -996,7 +996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeUponComplete: {fileID: 1668094956}
   timeLimit: 2
-  nameOfScene: Hospital
+  nameOfScene: HubPrototype
 --- !u!4 &425975125
 Transform:
   m_ObjectHideFlags: 0

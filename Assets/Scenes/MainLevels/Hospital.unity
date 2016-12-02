@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeUponComplete: {fileID: 1876958058}
   timeLimit: 1
-  nameOfScene: MaskRoom
+  nameOfScene: HubPrototype
 --- !u!4 &485910203
 Transform:
   m_ObjectHideFlags: 0
