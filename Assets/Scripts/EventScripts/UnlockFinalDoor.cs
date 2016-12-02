@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 public class UnlockFinalDoor : MonoBehaviour {
 	public List<string> areaVisitedNames = new List<string>();	// What were the area that the player visited? 
+    public AudioClip unlockSound;
 
 	// Allows for this object to persist in each area.
 	void Awake()
@@ -34,7 +35,7 @@ public class UnlockFinalDoor : MonoBehaviour {
 		{
 			case "HubPrototype":
 				// We first see if the player has visited other rooms already. If so, those warps are deactivated.
-				GameObject[] warpZones = GameObject.FindGameObjectsWithTag("LevelWarp");
+				GameObject[] warpZones = GameObject.FindGameObjectsWithTag("InspectEvent");
 				for(int i = 0; i < warpZones.Length; i++)
 				{
 					if(areaVisitedNames.Contains(warpZones[i].GetComponent<ChangeScene>().nameOfScene))
@@ -43,7 +44,12 @@ public class UnlockFinalDoor : MonoBehaviour {
 				
 				// If the player has visited all of the rooms, the final door is unlocked (either enabling the warp or it's a locked door).
 				if(areaVisitedNames.Count == warpZones.Length - 1)
-					GameObject.Find("MaskRoomWarp").gameObject.GetComponent<ChangeScene>().enabled = true;
+                {
+                    GameObject.Find("DoorOfAcceptance").gameObject.GetComponent<ChangeScene>().enabled = true;
+                    GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("It sounds like a new room has unlocked...");
+                    GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(unlockSound, 1f);
+                }
+					
 					//GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
 
 				break;

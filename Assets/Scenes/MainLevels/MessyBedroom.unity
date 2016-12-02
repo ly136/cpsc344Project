@@ -963,7 +963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeUponComplete: {fileID: 1033609108}
   timeLimit: 2
-  nameOfScene: CleanLivingRoom
+  nameOfScene: HubPrototype
 --- !u!4 &451753310
 Transform:
   m_ObjectHideFlags: 0

@@ -568,7 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeUponComplete: {fileID: 1657170191}
   timeLimit: 2
-  nameOfScene: MessyBedroom
+  nameOfScene: HubPrototype
 --- !u!1001 &321735564
 Prefab:
   m_ObjectHideFlags: 0
