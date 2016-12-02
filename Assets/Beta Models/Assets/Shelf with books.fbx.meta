@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: 8e9b3a68a54a16b499291bb6b86c8f15
+timeCreated: 1480667967
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Books1
+    100002: Books2
+    100004: Books_On_Shelf_1:back
+    100006: Books_On_Shelf_1:left
+    100008: Books_On_Shelf_1:pCube1
+    100010: Books_On_Shelf_1:pCube2
+    100012: Books_On_Shelf_1:pCube3
+    100014: Books_On_Shelf_1:pCube4
+    100016: Books_On_Shelf_1:pCube5
+    100018: Books_On_Shelf_2:back
+    100020: Books_On_Shelf_2:left
+    100022: Books_On_Shelf_2:pCube1
+    100024: Books_On_Shelf_2:pCube2
+    100026: Books_On_Shelf_2:pCube3
+    100028: left
+    100030: pCube1
+    100032: pCube1 1
+    100034: pCube1 2
+    100036: pCube10
+    100038: pCube11
+    100040: pCube12
+    100042: pCube13
+    100044: pCube14
+    100046: pCube15
+    100048: pCube16
+    100050: pCube17
+    100052: pCube18
+    100054: pCube19
+    100056: pCube2
+    100058: pCube2 1
+    100060: pCube2 2
+    100062: pCube20
+    100064: pCube21
+    100066: pCube22
+    100068: pCube3
+    100070: pCube3 1
+    100072: pCube3 2
+    100074: pCube4
+    100076: pCube5
+    100078: pCube5 1
+    100080: pCube6
+    100082: pCube7
+    100084: pCube8
+    100086: pCube9
+    100088: //RootNode
+    100090: transform1
+    100092: transform2
+    100094: transform3
+    100096: transform4
+    100098: transform5
+    400000: Books1
+    400002: Books2
+    400004: Books_On_Shelf_1:back
+    400006: Books_On_Shelf_1:left
+    400008: Books_On_Shelf_1:pCube1
+    400010: Books_On_Shelf_1:pCube2
+    400012: Books_On_Shelf_1:pCube3
+    400014: Books_On_Shelf_1:pCube4
+    400016: Books_On_Shelf_1:pCube5
+    400018: Books_On_Shelf_2:back
+    400020: Books_On_Shelf_2:left
+    400022: Books_On_Shelf_2:pCube1
+    400024: Books_On_Shelf_2:pCube2
+    400026: Books_On_Shelf_2:pCube3
+    400028: left
+    400030: pCube1
+    400032: pCube1 1
+    400034: pCube1 2
+    400036: pCube10
+    400038: pCube11
+    400040: pCube12
+    400042: pCube13
+    400044: pCube14
+    400046: pCube15
+    400048: pCube16
+    400050: pCube17
+    400052: pCube18
+    400054: pCube19
+    400056: pCube2
+    400058: pCube2 1
+    400060: pCube2 2
+    400062: pCube20
+    400064: pCube21
+    400066: pCube22
+    400068: pCube3
+    400070: pCube3 1
+    400072: pCube3 2
+    400074: pCube4
+    400076: pCube5
+    400078: pCube5 1
+    400080: pCube6
+    400082: pCube7
+    400084: pCube8
+    400086: pCube9
+    400088: //RootNode
+    400090: transform1
+    400092: transform2
+    400094: transform3
+    400096: transform4
+    400098: transform5
+    2300000: Books_On_Shelf_1:pCube1
+    2300002: Books_On_Shelf_1:pCube2
+    2300004: Books_On_Shelf_1:pCube3
+    2300006: Books_On_Shelf_1:pCube4
+    2300008: Books_On_Shelf_1:pCube5
+    2300010: Books_On_Shelf_2:pCube1
+    2300012: Books_On_Shelf_2:pCube2
+    2300014: Books_On_Shelf_2:pCube3
+    2300016: pCube1 1
+    2300018: pCube1 2
+    2300020: pCube10
+    2300022: pCube11
+    2300024: pCube12
+    2300026: pCube13
+    2300028: pCube14
+    2300030: pCube15
+    2300032: pCube16
+    2300034: pCube17
+    2300036: pCube18
+    2300038: pCube19
+    2300040: pCube2 1
+    2300042: pCube2 2
+    2300044: pCube20
+    2300046: pCube21
+    2300048: pCube22
+    2300050: pCube3 1
+    2300052: pCube3 2
+    2300054: pCube5 1
+    2300056: pCube6
+    2300058: pCube7
+    2300060: pCube8
+    2300062: pCube9
+    3300000: Books_On_Shelf_1:pCube1
+    3300002: Books_On_Shelf_1:pCube2
+    3300004: Books_On_Shelf_1:pCube3
+    3300006: Books_On_Shelf_1:pCube4
+    3300008: Books_On_Shelf_1:pCube5
+    3300010: Books_On_Shelf_2:pCube1
+    3300012: Books_On_Shelf_2:pCube2
+    3300014: Books_On_Shelf_2:pCube3
+    3300016: pCube1 1
+    3300018: pCube1 2
+    3300020: pCube10
+    3300022: pCube11
+    3300024: pCube12
+    3300026: pCube13
+    3300028: pCube14
+    3300030: pCube15
+    3300032: pCube16
+    3300034: pCube17
+    3300036: pCube18
+    3300038: pCube19
+    3300040: pCube2 1
+    3300042: pCube2 2
+    3300044: pCube20
+    3300046: pCube21
+    3300048: pCube22
+    3300050: pCube3 1
+    3300052: pCube3 2
+    3300054: pCube5 1
+    3300056: pCube6
+    3300058: pCube7
+    3300060: pCube8
+    3300062: pCube9
+    4300000: pCube6
+    4300002: Books_On_Shelf_1:pCube5
+    4300004: Books_On_Shelf_1:pCube1
+    4300006: Books_On_Shelf_1:pCube2
+    4300008: Books_On_Shelf_1:pCube3
+    4300010: Books_On_Shelf_1:pCube4
+    4300012: pCube3
+    4300014: pCube1
+    4300016: pCube2
+    4300018: pCube7
+    4300020: pCube8
+    4300022: pCube9
+    4300024: pCube5
+    4300026: pCube11
+    4300028: pCube13
+    4300030: pCube14
+    4300032: pCube15
+    4300034: pCube16
+    4300036: pCube17
+    4300038: pCube18
+    4300040: pCube19
+    4300042: Books_On_Shelf_2:pCube2
+    4300044: Books_On_Shelf_2:pCube1
+    4300046: Books_On_Shelf_2:pCube3
+    4300048: pCube2
+    4300050: pCube3
+    4300052: pCube1
+    4300054: pCube10
+    4300056: pCube12
+    4300058: pCube20
+    4300060: pCube21
+    4300062: pCube22
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
