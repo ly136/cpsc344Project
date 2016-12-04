@@ -10,7 +10,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScenes/title_screen.unity
   - enabled: 1
-    path: Assets/Scenes/MenuScenes/gameover_screen.unity
+    path: Assets/Scenes/MainLevels/Introduction.unity
+  - enabled: 1
+    path: Assets/Scenes/MainLevels/HubPrototype.unity
   - enabled: 1
     path: Assets/Scenes/MainLevels/CleanBedroom.unity
   - enabled: 1
@@ -23,6 +25,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainLevels/MessyBedroom.unity
   - enabled: 1
     path: Assets/Scenes/MainLevels/MaskRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/MainLevels/Conclusion.unity
+  - enabled: 1
+    path: Assets/Scenes/MenuScenes/gameover_screen.unity
   - enabled: 1
     path: Assets/Scenes/TestArea/TestScene.unity
   - enabled: 1

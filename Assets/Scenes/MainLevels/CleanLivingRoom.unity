@@ -1351,19 +1351,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usingItemSounds:
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: f013edc431aa61648a7aba0bbf976b3b, type: 3}
+  - {fileID: 8300000, guid: 1891e2bc39a42ea4d9b9c4c25f95a621, type: 3}
+  - {fileID: 8300000, guid: 587ede7eee36e0c40a130ee2af60f2af, type: 3}
+  - {fileID: 8300000, guid: b5575d69e5f1a88438de8c91b6c19f6c, type: 3}
+  - {fileID: 8300000, guid: b195192bb836e8c42963fdc4d01d21f4, type: 3}
+  - {fileID: 8300000, guid: 9e793e8bb6405cc4d8927a780f134c8d, type: 3}
   lastItemSoundList:
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
-  - {fileID: 8300000, guid: e17ff93112c014303af6245c9a94923d, type: 3}
+  - {fileID: 8300000, guid: 39ee8884236950a4999564314327e5e0, type: 3}
+  - {fileID: 8300000, guid: 4a662501bf6feb343a7fa1cd507608f6, type: 3}
+  - {fileID: 8300000, guid: 4bfe3275fb09e7840ac2d6c86dbcdc16, type: 3}
+  - {fileID: 8300000, guid: 44551146c0735f04681d22029579d038, type: 3}
+  - {fileID: 8300000, guid: 39a753c72ecafb347abb3dc92691d7a8, type: 3}
+  - {fileID: 8300000, guid: 34cffe2a4b0c8ed4aa975afb52a1b323, type: 3}
   itemsPickedUp:
   - {fileID: 1588049845}
   - {fileID: 2699267}

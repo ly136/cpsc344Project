@@ -130,6 +130,7 @@ GameObject:
   - 65: {fileID: 14754872}
   - 23: {fileID: 14754871}
   - 114: {fileID: 14754870}
+  - 114: {fileID: 14754874}
   m_Layer: 0
   m_Name: Calender
   m_TagString: InspectEvent
@@ -158,9 +159,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 14754868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 245ea9e634733487e88992aa9c41ffc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 55c91dcc53fcb44aaba6c92a34585ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasSolvedEvent: 0
+  partOfEventChain: 0
 --- !u!23 &14754871
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -209,6 +212,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 14754868}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &14754874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14754868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemAvailableOrNeed:
+  - Calender
+  isUsingItemEvent: 0
+  deactivateOnComplete: 1
 --- !u!1 &22007912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2016,7 @@ GameObject:
   - 4: {fileID: 1033609110}
   - 114: {fileID: 1033609109}
   - 114: {fileID: 1033609111}
+  - 114: {fileID: 1033609112}
   m_Layer: 0
   m_Name: VoiceInHeadEvent
   m_TagString: Untagged
@@ -2013,11 +2032,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033609108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f81a2f95fe743deac63979a6deefde, type: 3}
+  m_Script: {fileID: 11500000, guid: 022b0d06c099b424aa20c62f508bc3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 1920732412}
-  playUponCompleteEvent: {fileID: 380696841}
+  playUponCompleteEvent: {fileID: 14754868}
   soundBite: {fileID: 8300000, guid: 73668e807010742f5af3ff7f4e16c903, type: 3}
   soundVolume: 1
   delayBeforePlaying: 0
@@ -2048,6 +2067,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasSolvedEvent: 0
   partOfEventChain: 0
+--- !u!114 &1033609112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033609108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3129131f0a7904500b7f726d777707d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleTime: 020000000100000002000000020000000200000002000000
+  subTitles:
+  - You wanna come with me next week?
+  - Oh, come on!
+  - You never wanna hang out anymore!
+  - It'll be fun!
+  - I never get to see you anymore!
+  - Stop hiding and come out for once!
 --- !u!1001 &1072509888
 Prefab:
   m_ObjectHideFlags: 0
