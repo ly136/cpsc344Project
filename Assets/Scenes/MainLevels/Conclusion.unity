@@ -178,7 +178,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c77efa9c1897a40aead4cad67ae20d96, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 359981b80873b15438ff5145be507470, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeUponComplete: {fileID: 1642254569}
   timeLimit: 0
-  nameOfScene: HubPrototype
+  nameOfScene: gameover_screen
 --- !u!4 &1017849851
 Transform:
   m_ObjectHideFlags: 0
@@ -425,13 +425,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3129131f0a7904500b7f726d777707d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleTime: 0100000002000000020000000100000002000000
+  titleTime: 02000000010000000200000001000000020000000100000003000000010000000100000001000000010000000100000001000000
   subTitles:
-  - 
   - What is your name?
+  - 
   - Do you remember your name?
   - 
   - Do you know who you are?
+  - 
+  - You know what you are, don't you?
+  - You're stupid --
+  - -- a shitty best friend --
+  - -- a murderer --
+  - -- an idiot -- killer --
+  - -- incompetant --
+  - -- dead!
 --- !u!114 &1642254572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 484494932}
   playUponCompleteEvent: {fileID: 832563848}
-  soundBite: {fileID: 8300000, guid: c77efa9c1897a40aead4cad67ae20d96, type: 3}
+  soundBite: {fileID: 8300000, guid: 359981b80873b15438ff5145be507470, type: 3}
   soundVolume: 1
   delayBeforePlaying: 0
   playedAlready: 0

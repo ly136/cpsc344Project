@@ -6836,6 +6836,7 @@ GameObject:
   - 4: {fileID: 1876958060}
   - 114: {fileID: 1876958059}
   - 114: {fileID: 1876958061}
+  - 114: {fileID: 1876958062}
   m_Layer: 0
   m_Name: TVSounds
   m_TagString: Untagged
@@ -6851,14 +6852,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1876958058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f81a2f95fe743deac63979a6deefde, type: 3}
+  m_Script: {fileID: 11500000, guid: 022b0d06c099b424aa20c62f508bc3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 483098763}
   playUponCompleteEvent: {fileID: 70413164}
   soundBite: {fileID: 8300000, guid: 5d738de68527a4389967b45e0565e94c, type: 3}
   soundVolume: 1
-  delayBeforePlaying: 2
+  delayBeforePlaying: 0
   playedAlready: 0
 --- !u!4 &1876958060
 Transform:
@@ -6886,6 +6887,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasSolvedEvent: 0
   partOfEventChain: 0
+--- !u!114 &1876958062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876958058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3129131f0a7904500b7f726d777707d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleTime: 0100000002000000020000000100000003000000
+  subTitles:
+  - 
+  - Orange City Police Department have shut down
+  - a local party on New Year's Eve upon
+  - receiving numerous noise complaints
+  - on account of disturbing the peace.
 --- !u!1 &1878215698
 GameObject:
   m_ObjectHideFlags: 0

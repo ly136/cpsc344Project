@@ -2397,6 +2397,7 @@ GameObject:
   - 4: {fileID: 1657170194}
   - 114: {fileID: 1657170193}
   - 114: {fileID: 1657170192}
+  - 114: {fileID: 1657170195}
   m_Layer: 0
   m_Name: SoundEvent
   m_TagString: Untagged
@@ -2425,14 +2426,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1657170191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f81a2f95fe743deac63979a6deefde, type: 3}
+  m_Script: {fileID: 11500000, guid: 022b0d06c099b424aa20c62f508bc3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 569794939}
   playUponCompleteEvent: {fileID: 332836086}
   soundBite: {fileID: 8300000, guid: ec1b7bcdffbf8449c8050395755a91e2, type: 3}
   soundVolume: 1
-  delayBeforePlaying: 2
+  delayBeforePlaying: 0
   playedAlready: 0
 --- !u!4 &1657170194
 Transform:
@@ -2447,6 +2448,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &1657170195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657170191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3129131f0a7904500b7f726d777707d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleTime: 020000000200000002000000
+  subTitles:
+  - You're jamming with the hottest--
+  - Traffic on I-5 is looking a little --
+  - O'Reilly--
 --- !u!4 &1714973753 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011024023396, guid: 18fab6ca44c3a6a49833af8576b9c89c,

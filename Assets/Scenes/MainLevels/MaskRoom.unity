@@ -707,7 +707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeUponComplete: {fileID: 0}
   timeLimit: 2
-  nameOfScene: gameover_screen
+  nameOfScene: Conclusion
 --- !u!65 &506758346
 BoxCollider:
   m_ObjectHideFlags: 0

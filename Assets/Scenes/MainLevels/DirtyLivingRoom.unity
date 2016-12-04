@@ -2030,6 +2030,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013750147026, guid: 8e3bbaea498f047be8c23ba457a42b8c,
+        type: 2}
+      propertyPath: fontStyle.m_TextClipping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
   m_IsPrefabParent: 0
@@ -2225,6 +2230,7 @@ GameObject:
   - 4: {fileID: 1668094958}
   - 114: {fileID: 1668094957}
   - 114: {fileID: 1668094959}
+  - 114: {fileID: 1668094960}
   m_Layer: 0
   m_Name: Voicemail
   m_TagString: Untagged
@@ -2240,7 +2246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1668094956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f81a2f95fe743deac63979a6deefde, type: 3}
+  m_Script: {fileID: 11500000, guid: 022b0d06c099b424aa20c62f508bc3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 1662357419}
@@ -2275,6 +2281,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasSolvedEvent: 0
   partOfEventChain: 0
+--- !u!114 &1668094960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1668094956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3129131f0a7904500b7f726d777707d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleTime: 030000000100000002000000020000000300000002000000010000000200000002000000020000000200000001000000
+  subTitles:
+  - You have one unheard message.
+  - 
+  - First unheard message.
+  - 
+  - Hey, pick up your phone or answer your texts!
+  - I can't find you anywhere!
+  - Call me or message me or
+  - I dunno, SOMETHING when you get this message!
+  - Let me know that you're still alive at least!
+  - Dammit!
+  - 
+  - End of message.
 --- !u!1 &1698171451
 GameObject:
   m_ObjectHideFlags: 0
