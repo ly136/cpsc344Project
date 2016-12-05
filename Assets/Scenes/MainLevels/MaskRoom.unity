@@ -166,7 +166,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 0.46, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &214461103
 MeshRenderer:
@@ -553,7 +553,7 @@ Transform:
   m_Children:
   - {fileID: 89222180}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &491021059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,11 +1024,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010852236052, guid: f43e3e41b54fc42aa87b9b0ec4146066, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -22
+      value: -22.32
       objectReference: {fileID: 0}
     - target: {fileID: 4000010852236052, guid: f43e3e41b54fc42aa87b9b0ec4146066, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.7
+      value: 8.83
       objectReference: {fileID: 0}
     - target: {fileID: 4000010852236052, guid: f43e3e41b54fc42aa87b9b0ec4146066, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1060,15 +1060,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010852236052, guid: f43e3e41b54fc42aa87b9b0ec4146066, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.32461324
+      value: 0.39625382
       objectReference: {fileID: 0}
     - target: {fileID: 4000010852236052, guid: f43e3e41b54fc42aa87b9b0ec4146066, type: 2}
       propertyPath: m_LocalScale.y
-      value: 8.017945
+      value: 9.787468
       objectReference: {fileID: 0}
     - target: {fileID: 4000010852236052, guid: f43e3e41b54fc42aa87b9b0ec4146066, type: 2}
       propertyPath: m_LocalScale.z
-      value: 5.4535007
+      value: 6.6570625
       objectReference: {fileID: 0}
     - target: {fileID: 114000012969252144, guid: f43e3e41b54fc42aa87b9b0ec4146066,
         type: 2}
@@ -1107,7 +1107,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 0.49, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &749384624
 MeshRenderer:
@@ -1207,7 +1207,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012932472366, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e3bbaea498f047be8c23ba457a42b8c, type: 2}
@@ -1607,7 +1607,7 @@ Transform:
   m_Children:
   - {fileID: 1855838229}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!65 &1312026180
 BoxCollider:
   m_ObjectHideFlags: 0

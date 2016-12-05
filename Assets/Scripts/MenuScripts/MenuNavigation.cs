@@ -11,7 +11,7 @@ public class MenuNavigation : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("CleanBedroom");
+        SceneManager.LoadScene("Introduction");
     }
 
     public void QuitGame()

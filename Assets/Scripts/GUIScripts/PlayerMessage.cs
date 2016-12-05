@@ -50,11 +50,9 @@ public class PlayerMessage : MonoBehaviour {
 	// Changes the text to the next message. If it reaches the end, the message displays stops.
 	void ChangeToNextMessageInArray()
 	{
+		currMessageIndex++;
 		if(currMessageIndex < messageArray.Length)
-		{
-			currMessageIndex++;
 			Invoke("ChangeToNextMessageInArray", arrayTime[currMessageIndex]);
-		}
 	}
 
 	// Makes the one line of text to dissapear from the screen
@@ -69,6 +67,7 @@ public class PlayerMessage : MonoBehaviour {
 
         if (IsInvoking("ChangeToNextMessageInArray") == true)
 			CancelInvoke("ChangeToNextMessageInArray");
+		
         arrayTime = array;
 		messageArray = newMessage;
 		currMessageIndex = 0;

@@ -1377,12 +1377,12 @@ Prefab:
     - target: {fileID: 114000013927740174, guid: 8e3bbaea498f047be8c23ba457a42b8c,
         type: 2}
       propertyPath: maxWalkSpeed
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114000013927740174, guid: 8e3bbaea498f047be8c23ba457a42b8c,
         type: 2}
       propertyPath: maxFallSpeed
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 20000011062381460, guid: 8e3bbaea498f047be8c23ba457a42b8c,
         type: 2}

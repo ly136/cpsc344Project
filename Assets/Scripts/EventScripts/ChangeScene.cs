@@ -12,6 +12,7 @@ public class ChangeScene : MonoBehaviour {
 	public string nameOfScene;				//What's the name of the scene to change to?
 
 	private bool hasActivatedAlready = false;	//Used if this loadEvent's associated with another gameObject being complete.
+	private bool inTrigger = false;				//Used to check if the player is in the gameObject's vicinity.
 
 	// If this load scene is associated with a gameobject finishing, the player will be taken to a new scene at X time.
 	void Update()
@@ -24,6 +25,8 @@ public class ChangeScene : MonoBehaviour {
 				Invoke("TransitionToScene",timeLimit);
 			}
 		}
+		else if(inTrigger == true)
+			Invoke("TransitionToScene",timeLimit);
 	}
 
 	// If the player enters the hitbox of this gameobject, it loads the next scene.
@@ -36,16 +39,15 @@ public class ChangeScene : MonoBehaviour {
 		}
 	}
 
-	// If the player inspects this gameobject, they'll be warped.
+	// If the gameobject is an InspectEvent, it'll activate a boolean that will simulate the player is staying in it.
 	void OnTriggerStay(Collider other)
 	{
 		if(other.gameObject.tag == "Player" && gameObject.tag == "InspectEvent")
 		{
 			if(other.gameObject.GetComponent<PlayerActions>().isInteracting == true)
-			{
-				other.GetComponent<PlayerActions>().canMove = false;
-				Invoke("TransitionToScene",timeLimit);
-			}
+				inTrigger = true;
+			else
+				inTrigger = false;
 		}
 	}
 

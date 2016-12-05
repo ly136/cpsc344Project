@@ -38,20 +38,17 @@ public class UnlockFinalDoor : MonoBehaviour {
 				GameObject[] warpZones = GameObject.FindGameObjectsWithTag("InspectEvent");
 				for(int i = 0; i < warpZones.Length; i++)
 				{
-					if(areaVisitedNames.Contains(warpZones[i].GetComponent<ChangeScene>().nameOfScene))
+					if(areaVisitedNames.Contains(warpZones[i].GetComponent<ChangeScene>().nameOfScene) == true)
 						warpZones[i].GetComponent<ChangeScene>().enabled = false;
 				}
 				
 				// If the player has visited all of the rooms, the final door is unlocked (either enabling the warp or it's a locked door).
 				if(areaVisitedNames.Count == warpZones.Length - 1)
                 {
-                    GameObject.Find("DoorOfAcceptance").gameObject.GetComponent<ChangeScene>().enabled = true;
+					GameObject.Find("DoorOfAcceptance").gameObject.GetComponent<ChangeScene>().enabled = true;
                     GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("It sounds like a new room has unlocked...");
                     GameObject.Find("SoundPlayer").GetComponent<AudioSource>().PlayOneShot(unlockSound, 1f);
                 }
-					
-					//GetComponent<HasSolvedEvent>().SetIfSolvedEvent(true);
-
 				break;
 			case "CleanBedroom":
 				areaVisitedNames.Add(scene.name);
