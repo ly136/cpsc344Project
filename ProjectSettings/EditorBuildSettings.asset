@@ -29,7 +29,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainLevels/Conclusion.unity
   - enabled: 1
     path: Assets/Scenes/MenuScenes/gameover_screen.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestArea/TestScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestArea/TestScene2.unity

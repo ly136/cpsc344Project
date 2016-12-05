@@ -104,6 +104,7 @@ GameObject:
   - 65: {fileID: 2699270}
   - 114: {fileID: 2699269}
   - 114: {fileID: 2699268}
+  - 114: {fileID: 2699275}
   m_Layer: 0
   m_Name: Photo (1)
   m_TagString: InspectEvent
@@ -213,6 +214,28 @@ Transform:
   - {fileID: 2057567579}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &2699275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2699267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c3f85a9f1ff44eda1866633b812120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnSubTitleTime: 020000000300000002000000
+  burnSubTitles:
+  - Yeah, might as well get rid of it.
+  - It's not like people respected you in the
+  - first place for a little award anyway.
+  lastOneSubTitleTime: 02000000020000000200000002000000
+  lastOneSubTitles:
+  - 
+  - You're keeping that of all things?
+  - 'You think holding onto that '
+  - little thing would commend respect?
 --- !u!1 &114232388
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +250,7 @@ GameObject:
   - 65: {fileID: 114232391}
   - 114: {fileID: 114232390}
   - 114: {fileID: 114232389}
+  - 114: {fileID: 114232396}
   m_Layer: 0
   m_Name: Photo (4)
   m_TagString: InspectEvent
@@ -336,6 +360,31 @@ Transform:
   - {fileID: 1941290159}
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &114232396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114232388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c3f85a9f1ff44eda1866633b812120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnSubTitleTime: 010000000200000003000000
+  burnSubTitles:
+  - 
+  - Aren't you being a little heartless?
+  - You're throwing away a perfect little family?
+  lastOneSubTitleTime: 02000000010000000100000001000000020000000100000002000000
+  lastOneSubTitles:
+  - You miss Mommy and Daddy?
+  - 
+  - You think Mommy and Daddy would want to stick
+  - around you?
+  - You think they still love you?
+  - 
+  - 'Unconditional love is a fluke. '
 --- !u!1 &137919560
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +478,7 @@ GameObject:
   - 65: {fileID: 170136938}
   - 114: {fileID: 170136937}
   - 114: {fileID: 170136936}
+  - 114: {fileID: 170136943}
   m_Layer: 0
   m_Name: Photo (2)
   m_TagString: InspectEvent
@@ -538,6 +588,30 @@ Transform:
   - {fileID: 1094205238}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &170136943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170136935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c3f85a9f1ff44eda1866633b812120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnSubTitleTime: 030000000100000002000000
+  burnSubTitles:
+  - Good choice. True love doesn't exist anyway,
+  - and it's not like anyone would
+  - would love you after what's happened.
+  lastOneSubTitleTime: 010000000200000002000000020000000100000001000000
+  lastOneSubTitles:
+  - 
+  - Wow, you're hilarious.
+  - Do you think that you can still fall in love
+  - and live happily ever after?
+  - After what's happened?
+  - 'What a joke. '
 --- !u!1 &275779724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1167,7 @@ GameObject:
   - 65: {fileID: 745192326}
   - 114: {fileID: 745192325}
   - 114: {fileID: 745192324}
+  - 114: {fileID: 745192331}
   m_Layer: 0
   m_Name: Photo (3)
   m_TagString: InspectEvent
@@ -1202,6 +1277,28 @@ Transform:
   - {fileID: 1937040483}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &745192331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745192323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c3f85a9f1ff44eda1866633b812120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnSubTitleTime: 0200000002000000
+  burnSubTitles:
+  - So much for man's best friend.
+  - Loyalty isn't enough for you?
+  lastOneSubTitleTime: 0300000002000000010000000200000002000000
+  lastOneSubTitles:
+  - Ha! At least you have your priorities straight,
+  - but do you think your friends would
+  - stick around forever?
+  - Even a dog would stay for a little while
+  - and then leave you behind.
 --- !u!1 &769316121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,6 +2392,7 @@ GameObject:
   - 65: {fileID: 1588049848}
   - 114: {fileID: 1588049847}
   - 114: {fileID: 1588049846}
+  - 114: {fileID: 1588049853}
   m_Layer: 0
   m_Name: Photo
   m_TagString: InspectEvent
@@ -2404,6 +2502,26 @@ Transform:
   - {fileID: 1188777799}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1588049853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1588049845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c3f85a9f1ff44eda1866633b812120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnSubTitleTime: 0200000001000000
+  burnSubTitles:
+  - Are you sure about that?
+  - I thought you were proud of that.
+  lastOneSubTitleTime: 020000000200000002000000
+  lastOneSubTitles:
+  - Aren't you shameless?
+  - Someone needs to knock you off your pedestal
+  - if that's what you want to hold onto.
 --- !u!1 &1644068599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,6 +2787,7 @@ GameObject:
   - 65: {fileID: 1871211748}
   - 114: {fileID: 1871211747}
   - 114: {fileID: 1871211746}
+  - 114: {fileID: 1871211753}
   m_Layer: 0
   m_Name: Photo (5)
   m_TagString: InspectEvent
@@ -2778,6 +2897,29 @@ Transform:
   - {fileID: 1990195253}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &1871211753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871211745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c3f85a9f1ff44eda1866633b812120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnSubTitleTime: 01000000010000000200000003000000
+  burnSubTitles:
+  - 
+  - You're giving up those?
+  - I thought maybe they'd cheer you up, but I guess
+  - you don't want a little bit of happiness, after all.
+  lastOneSubTitleTime: 01000000030000000400000005000000
+  lastOneSubTitles:
+  - 
+  - Ain't no sunshine when she's gone,
+  - And she's gone for far too long
+  - 'Any time she goes away... '
 --- !u!1001 &1937040482
 Prefab:
   m_ObjectHideFlags: 0

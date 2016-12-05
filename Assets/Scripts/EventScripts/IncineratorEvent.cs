@@ -28,10 +28,11 @@ public class IncineratorEvent : MonoBehaviour {
 			{
 				for(int i = 0; i < itemsPickedUp.Length; i++)
 				{
-					if(itemsPickedUp[i].activeInHierarchy == true)
+					GameObject lastItem = itemsPickedUp[i];
+					if(lastItem.activeInHierarchy == true)
 					{
 						//Here, we assume that this object is the one that the player didn't pick up
-						switch(itemsPickedUp[i].GetComponent<ItemGetNeedEvent>().itemAvailableOrNeed[0])
+						switch(lastItem.GetComponent<ItemGetNeedEvent>().itemAvailableOrNeed[0])
 						{
 							case "Trophy":
 								soundPlayer.GetComponent<AudioSource>().PlayOneShot(lastItemSoundList[0],volume);
@@ -52,6 +53,9 @@ public class IncineratorEvent : MonoBehaviour {
 								soundPlayer.GetComponent<AudioSource>().PlayOneShot(lastItemSoundList[5],volume);
 								break;
 						}
+						GameObject.Find("Main Camera").GetComponent<PlayerMessage>().AssignNewMessageArray(
+							lastItem.GetComponent<IncineratorSubtitles>().lastOneSubTitles,
+							lastItem.GetComponent<IncineratorSubtitles>().lastOneSubTitleTime);
 						hasFinished = true;
 						break;
 					}
@@ -94,6 +98,18 @@ public class IncineratorEvent : MonoBehaviour {
 								soundPlayer.GetComponent<AudioSource>().PlayOneShot(usingItemSounds[5],volume);
 								break;
 						}
+
+						for(int i = 0; i < itemsPickedUp.Length; i++)
+						{
+							if(itemsPickedUp[i].GetComponent<ItemGetNeedEvent>().itemAvailableOrNeed[0] == player.GetItem(0))
+							{
+								GameObject.Find("Main Camera").GetComponent<PlayerMessage>().AssignNewMessageArray(
+									itemsPickedUp[i].GetComponent<IncineratorSubtitles>().burnSubTitles,
+									itemsPickedUp[i].GetComponent<IncineratorSubtitles>().burnSubTitleTime);
+								break;
+							}
+						}
+							
 						GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("Tossed " + player.GetItem(0));
 						player.RemoveFromInventory(player.GetItem(0));
 						numbItemsAccepted--;
