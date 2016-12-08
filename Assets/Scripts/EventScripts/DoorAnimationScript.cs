@@ -14,21 +14,5 @@ void OnTriggerEnter(Collider Other)
 			flag = true;
 	}
 }
-		
-
-void OnTriggerExit(Collider Other)
-{
-	if(Other.gameObject.tag == "Player")
-	{
-			gameObject.GetComponent<Animation>().Play("Closing");
-	}
-}    
-
-void OnTriggerStay(Collider Other){
-		if (Other.gameObject.tag == "Player") 
-		{
-			gameObject.GetComponent<Animation>().Play("Open");
-		}
-	}
 }
 

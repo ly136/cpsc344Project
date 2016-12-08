@@ -221,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &70413165
 Transform:
   m_ObjectHideFlags: 0
@@ -3350,9 +3350,58 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b9b869faa12414b4da4edf358019f6f5, type: 3}
+      propertyPath: m_TagString
+      value: InspectEvent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9b869faa12414b4da4edf358019f6f5, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &932071327 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: b9b869faa12414b4da4edf358019f6f5, type: 3}
+  m_PrefabInternal: {fileID: 932071326}
+--- !u!114 &932071328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932071327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c91dcc53fcb44aaba6c92a34585ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasSolvedEvent: 0
+  partOfEventChain: 1
+--- !u!114 &932071329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932071327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8003d49b517417b82e380935535ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemAvailableOrNeed:
+  - Newspaper
+  - Remote
+  isUsingItemEvent: 1
+  deactivateOnComplete: 0
+--- !u!65 &932071330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932071327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06, y: 0.032548033, z: 0.02}
+  m_Center: {x: -0.0019140063, y: 0.017262356, z: -2.4484464e-10}
 --- !u!1 &994265555
 GameObject:
   m_ObjectHideFlags: 0
@@ -6590,7 +6639,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2a747e1368bfafa428903a19d96cd719, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -6633,7 +6682,7 @@ Transform:
   m_GameObject: {fileID: 1853699138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 146.68, y: 2.28, z: 59.6}
-  m_LocalScale: {x: 1.360094, y: 0.22568591, z: 0.74644035}
+  m_LocalScale: {x: 1.360094, y: 0.22568591, z: 0.6345154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 781000679}
