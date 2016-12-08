@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchInspectObjects:
-  - {fileID: 0}
+  - {fileID: 1789976191}
 --- !u!1 &361988957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,15 +2812,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722548364, guid: 8d80f875935cc46c0a4ecdb09c73a3a3, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722548364, guid: 8d80f875935cc46c0a4ecdb09c73a3a3, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.27894685
+      value: 0.38719323
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722548364, guid: 8d80f875935cc46c0a4ecdb09c73a3a3, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.2789466
+      value: 0.57336086
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722548364, guid: 8d80f875935cc46c0a4ecdb09c73a3a3, type: 2}
       propertyPath: m_LocalScale.z
@@ -2843,6 +2843,10 @@ Prefab:
     - target: {fileID: 4000010722548364, guid: 8d80f875935cc46c0a4ecdb09c73a3a3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010685597388, guid: 8d80f875935cc46c0a4ecdb09c73a3a3, type: 2}
+      propertyPath: m_TagString
+      value: InspectEvent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d80f875935cc46c0a4ecdb09c73a3a3, type: 2}
@@ -3660,7 +3664,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1095616382}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -19.78, y: 20.3, z: -61}
+  m_LocalPosition: {x: -19.78, y: 18.4, z: -61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []
@@ -4954,7 +4958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1569586294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5670,7 +5674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e504fc53affc04b5ab56aeb197e8db5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchReceiver: {fileID: 1789976191}
+  switchReceiver: {fileID: 345268164}
   isSwitchActivated: 0
 --- !u!4 &1789976196 stripped
 Transform:
@@ -6541,6 +6545,18 @@ Prefab:
     - target: {fileID: 11100000, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
