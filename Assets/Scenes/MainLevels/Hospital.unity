@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 19e2485c6f92d6944ad20466ac77b04c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -6888,12 +6888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7d2c087d6074ba0a12c6d1b15effff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 483098763}
-  playUponCompleteEvent: {fileID: 70413164}
-  soundBite: {fileID: 8300000, guid: 5d738de68527a4389967b45e0565e94c, type: 3}
-  soundVolume: 1
-  delayBeforePlaying: 0
-  playedAlready: 0
 --- !u!4 &1876958060
 Transform:
   m_ObjectHideFlags: 0
