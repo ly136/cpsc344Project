@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaVisitedNames: []
-  unlockSound: {fileID: 8300000, guid: 15109ae2089474200b5de05c693258e7, type: 3}
+  unlockSound: {fileID: 8300000, guid: 704242bf6e605b84eab339385a063e3e, type: 3}
 --- !u!1 &1017849849
 GameObject:
   m_ObjectHideFlags: 0
