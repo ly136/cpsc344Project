@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - Toy Dog
+  - Dog
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &1024410541
@@ -5106,7 +5106,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011127385210, guid: 110d5ea4c8b7a4c4f855a2efd515a12a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 110d5ea4c8b7a4c4f855a2efd515a12a, type: 2}

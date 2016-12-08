@@ -43,7 +43,7 @@ public class IncineratorEvent : MonoBehaviour {
 							case "Roses":
 								soundPlayer.GetComponent<AudioSource>().PlayOneShot(lastItemSoundList[2],volume);
 								break;
-							case "Toy Dog":
+							case "Dog":
 								soundPlayer.GetComponent<AudioSource>().PlayOneShot(lastItemSoundList[3],volume);
 								break;
 							case "Family Sketch":
@@ -88,7 +88,7 @@ public class IncineratorEvent : MonoBehaviour {
 							case "Roses":
 								soundPlayer.GetComponent<AudioSource>().PlayOneShot(usingItemSounds[2],volume);
 								break;
-							case "Toy Dog":
+							case "Dog":
 								soundPlayer.GetComponent<AudioSource>().PlayOneShot(usingItemSounds[3],volume);
 								break;
 							case "Family Sketch":

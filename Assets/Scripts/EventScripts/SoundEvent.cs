@@ -56,6 +56,9 @@ public class SoundEvent : MonoBehaviour {
 		if(soundPlayer.GetComponent<AudioSource>().isPlaying == true)
 			soundPlayer.GetComponent<AudioSource>().Stop();
 
+		if(GameObject.Find("BGM") != null)
+			GameObject.Find("BGM").GetComponent<AudioSource>().Stop();
+
 		soundPlayer.GetComponent<AudioSource>().PlayOneShot(soundBite,1f);
 		playedAlready = true;
 

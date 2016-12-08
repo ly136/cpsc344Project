@@ -3210,6 +3210,7 @@ GameObject:
   - 4: {fileID: 1033609110}
   - 114: {fileID: 1033609109}
   - 114: {fileID: 1033609111}
+  - 114: {fileID: 1033609112}
   m_Layer: 0
   m_Name: VoiceInHeadEvent
   m_TagString: Untagged
@@ -3225,9 +3226,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033609108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f81a2f95fe743deac63979a6deefde, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f7d2c087d6074ba0a12c6d1b15effff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 1920732412}
+  playUponCompleteEvent: {fileID: 1052430577}
+  soundBite: {fileID: 8300000, guid: 73668e807010742f5af3ff7f4e16c903, type: 3}
+  soundVolume: 1
+  delayBeforePlaying: 0
+  playedAlready: 0
 --- !u!4 &1033609110
 Transform:
   m_ObjectHideFlags: 0
@@ -3254,6 +3261,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasSolvedEvent: 0
   partOfEventChain: 0
+--- !u!114 &1033609112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033609108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3129131f0a7904500b7f726d777707d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleTime: 020000000100000002000000020000000200000002000000
+  subTitles:
+  - Want to come with me next week?
+  - Oh, come on!
+  - You never want to hang out any more.
+  - It'll be fun!
+  - I never get to see you any more!
+  - Stop hiding and come out for once!
 --- !u!1001 &1038908729
 Prefab:
   m_ObjectHideFlags: 0
