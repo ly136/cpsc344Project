@@ -5,7 +5,8 @@ using System.Collections;
 public class SwitchInspect : MonoBehaviour {
 
 	public GameObject switchReceiver;	//Which Gameobject are these activating towards?
-	public bool isSwitchActivated;		//Is the switch turned on?
+	public bool isSwitchActivated;	//Is the switch turned on?
+	public GameObject lever;
 
 	// Takes the particle emitter from the child and activates it when the player approaches this
 	void OnTriggerEnter(Collider other)
@@ -31,11 +32,13 @@ public class SwitchInspect : MonoBehaviour {
 				if(isSwitchActivated == false)
 				{
 					isSwitchActivated = true;
+					lever.GetComponent<Animation> ().Play ("Lever On");
 					GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("It's now on.");
 				}
 				else
 				{
 					isSwitchActivated = false;
+					lever.GetComponent<Animation> ().Play ("Lever Off");
 					GameObject.Find("Main Camera").GetComponent<PlayerMessage>().DisplayOneMessage("It's now off.");
 				}
 				switchReceiver.GetComponent<SwitchReceiver>().CheckSwitchObjects();

@@ -14,8 +14,9 @@ public class ItemGetNeedEvent : MonoBehaviour {
 	//Checks whether this event will be destroyed once it's complete.
 	void Update()
 	{
-		if(gameObject.GetComponent<HasSolvedEvent>().GetIfSolvedEvent() == true && deactivateOnComplete == true)
-			gameObject.SetActive(false);
+		if (gameObject.GetComponent<HasSolvedEvent> ().GetIfSolvedEvent () == true && deactivateOnComplete == true) {
+			gameObject.SetActive (false);
+		}
 	}
 
 	//This determines if the player is inspecting said spot and will either pick up an item or use an item.
