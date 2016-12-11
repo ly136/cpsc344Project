@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaVisitedNames: []
-  unlockSound: {fileID: 8300000, guid: 15109ae2089474200b5de05c693258e7, type: 3}
+  unlockSound: {fileID: 8300000, guid: 704242bf6e605b84eab339385a063e3e, type: 3}
 --- !u!1 &1017849849
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1642254569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8f8f4ed89369480196672e3b9ae3bba, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f7d2c087d6074ba0a12c6d1b15effff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 484494932}
