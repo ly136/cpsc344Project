@@ -3229,12 +3229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7d2c087d6074ba0a12c6d1b15effff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 1920732412}
-  playUponCompleteEvent: {fileID: 1052430577}
-  soundBite: {fileID: 8300000, guid: 73668e807010742f5af3ff7f4e16c903, type: 3}
-  soundVolume: 1
-  delayBeforePlaying: 0
-  playedAlready: 0
 --- !u!4 &1033609110
 Transform:
   m_ObjectHideFlags: 0
@@ -4998,6 +4992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchReceiver: {fileID: 1569586293}
   isSwitchActivated: 0
+  lever: {fileID: 0}
 --- !u!65 &1569586295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5702,6 +5697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchReceiver: {fileID: 345268164}
   isSwitchActivated: 0
+  lever: {fileID: 1789976191}
 --- !u!4 &1789976196 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
@@ -6673,7 +6669,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
       propertyPath: m_RootOrder
@@ -6687,6 +6683,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400002, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 176c64962db05cd4e86e6b546e4fff41, type: 3}
   m_IsPrefabParent: 0
