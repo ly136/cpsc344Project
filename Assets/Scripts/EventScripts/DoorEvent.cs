@@ -12,13 +12,8 @@ public class DoorEvent : MonoBehaviour {
 	public bool isOpen;							//Is the door currently open?
 	public GameObject lockedEvent;				//This contains the GameObject that has the event which is locking the door.
 
-	private Transform actualDoor;				//This contains the door itself.
+	public Transform actualDoor;				//This contains the door itself.
 
-	// ActualDoor is set here for easier calling.
-	void Start()
-	{
-		actualDoor = gameObject.transform.parent;
-	}
 
 	// If the player is interacting with the door, the door will either open or close.
 	void OnTriggerStay(Collider other)
@@ -42,19 +37,21 @@ public class DoorEvent : MonoBehaviour {
 	}
 
 	// This open/closes the door.
-	void DoorOpenClose()
+	public void DoorOpenClose()
 	{
 		if(isOpen == true)
 		{
 			//Insert something with animation to close the door. This is temp.
-			actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y - 6f, actualDoor.transform.position.z);
+			//actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y - 6f, actualDoor.transform.position.z);
+			actualDoor.GetComponent<Animation>().Play("Closing");
 			isOpen = false;
 
 		}
 		else
 		{
 			//Insert something with animation to open the door. This is temp.
-			actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y + 6f, actualDoor.transform.position.z);
+			//actualDoor.transform.position = new Vector3(actualDoor.transform.position.x, actualDoor.transform.position.y + 6f, actualDoor.transform.position.z);
+			actualDoor.GetComponent<Animation>().Play("Opening");
 			isOpen = true;
 		}
 	}
