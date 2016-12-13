@@ -3220,9 +3220,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033609108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f7d2c087d6074ba0a12c6d1b15effff, type: 3}
+  m_Script: {fileID: 11500000, guid: 874dd21603ee517458fb613b925d72d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 1920732412}
+  playUponCompleteEvent: {fileID: 1052430577}
+  soundBite: {fileID: 8300000, guid: 73668e807010742f5af3ff7f4e16c903, type: 3}
+  soundVolume: 1
+  delayBeforePlaying: 0
+  playedAlready: 0
 --- !u!4 &1033609110
 Transform:
   m_ObjectHideFlags: 0
