@@ -38,8 +38,9 @@ public class UnlockFinalDoor : MonoBehaviour {
 				GameObject[] warpZones = GameObject.FindGameObjectsWithTag("InspectEvent");
 				for(int i = 0; i < warpZones.Length; i++)
 				{
-					if(areaVisitedNames.Contains(warpZones[i].GetComponent<ChangeScene>().nameOfScene) == true)
-						warpZones[i].GetComponent<ChangeScene>().enabled = false;
+                    if (areaVisitedNames.Contains(warpZones[i].GetComponent<ChangeScene>().nameOfScene) == true)
+                        GameObject.Destroy(warpZones[i]);
+                    
 				}
 				
 				// If the player has visited all of the rooms, the final door is unlocked (either enabling the warp or it's a locked door).

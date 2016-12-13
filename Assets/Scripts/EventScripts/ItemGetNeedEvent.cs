@@ -62,8 +62,9 @@ public class ItemGetNeedEvent : MonoBehaviour {
 											// If this was associated with a locked door, we activate the door event.
 											if (gameObject.transform.parent.childCount > 1) {
 												gameObject.transform.parent.GetChild (1).gameObject.SetActive (true);
-												gameObject.transform.parent.GetChild(1).GetComponent<DoorEvent>().DoorOpenClose();
-
+                                                if(gameObject.transform.parent.GetChild(1).GetComponent<DoorEvent>() != null)
+                                                    gameObject.transform.parent.GetChild(1).GetComponent<DoorEvent>().DoorOpenClose();
+                                                  
 											}
 										}
 									}

@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - Mask2
+  - Fragment of Despair
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &335164671
@@ -773,7 +773,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 335164668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.77, y: 4.32, z: 39.25}
+  m_LocalPosition: {x: -14.3, y: 4.32, z: 14.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - Mask1
+  - Fragment of Fear
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &416021323
@@ -914,7 +914,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 416021320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.48, y: 4.32, z: 39.25}
+  m_LocalPosition: {x: -29.7, y: 4.32, z: 43.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - Mask3
+  - Fragment of Rage
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &491021062
@@ -1051,7 +1051,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 491021059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.6, y: 4.32, z: 39.25}
+  m_LocalPosition: {x: -40.6, y: 4.32, z: 23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - Mask4
+  - Fragment of Mourning
   isUsingItemEvent: 0
   deactivateOnComplete: 1
 --- !u!65 &527283744
@@ -2042,11 +2042,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemList:
-  - Mask1
-  - Mask2
-  - Mask3
-  - Mask4
-  newItem: MaskCombined
+  - Fragment of Fear
+  - Fragment of Despair
+  - Fragment of Rage
+  - Fragment of Mourning
+  newItem: Mask of Truth
   hasReceivedItem: 0
 --- !u!4 &923244478
 Transform:
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemAvailableOrNeed:
-  - MaskCombined
+  - Mask of Truth
   isUsingItemEvent: 1
   deactivateOnComplete: 1
 --- !u!65 &1259538475

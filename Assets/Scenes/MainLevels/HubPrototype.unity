@@ -278,6 +278,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f939c061f4be1b1479f55b082bfeac2e, type: 2}
+    - target: {fileID: 100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
+      propertyPath: m_TagString
+      value: InspectEvent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
   m_IsPrefabParent: 0
@@ -1543,6 +1547,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 09c5ab8520e61c84cbc54e97b84f4f53, type: 2}
+    - target: {fileID: 100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
+      propertyPath: m_TagString
+      value: InspectEvent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
   m_IsPrefabParent: 0
@@ -1794,6 +1802,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 54f7c5d266925f64897c8444d7f3b400, type: 2}
+    - target: {fileID: 100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
+      propertyPath: m_TagString
+      value: InspectEvent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
   m_IsPrefabParent: 0
@@ -2171,6 +2183,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b132267c09902a4ea7d37b913ada52f, type: 2}
+    - target: {fileID: 100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
+      propertyPath: m_TagString
+      value: InspectEvent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
   m_IsPrefabParent: 0
@@ -2748,6 +2764,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f8315e467c71d1e47a750094b423c73e, type: 2}
+    - target: {fileID: 100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
+      propertyPath: m_TagString
+      value: InspectEvent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 124fa1b106d19204088079b309fa212b, type: 3}
   m_IsPrefabParent: 0
