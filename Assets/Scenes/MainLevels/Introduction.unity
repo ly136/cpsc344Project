@@ -380,10 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6512881ad78fe4fd9ae503442e9e540e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaVisitedNames:
-  - CleanBedroom
-  - DirtyLivingRoom
-  - CleanLivingRoom
+  areaVisitedNames: []
   unlockSound: {fileID: 8300000, guid: 704242bf6e605b84eab339385a063e3e, type: 3}
 --- !u!1 &1017849849
 GameObject:
